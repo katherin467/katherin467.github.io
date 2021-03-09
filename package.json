@@ -1,0 +1,24 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "My personal website project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katherin467/katherin467.github.io.git"
+  },
+  "author": "Katherine Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katherin467/katherin467.github.io/issues"
+  },
+  "homepage": "https://github.com/katherin467/katherin467.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7"
+  }
+}

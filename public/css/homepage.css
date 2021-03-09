@@ -1,0 +1,38 @@
+nav {
+	position:fixed;
+	top: 0;
+	padding: 20px;
+}
+
+nav a:active {
+	color: #ff0000;
+}
+
+main {
+    border: 2px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.greeting h1 {
+	color: #895DDB;
+}
+
+footer {
+	background-color: #5E3F96;
+	width: 100%;
+}
+
+footer p {
+	padding: 20px;
+	color: #ffffff;
+}
+
+footer i {
+	margin: 20px;
+	color: #ffffff;	
+}
+
+footer i:hover {
+	color: #000000;
+}
