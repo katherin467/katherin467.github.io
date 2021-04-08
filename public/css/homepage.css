@@ -1,38 +1,103 @@
-nav {
-	position:fixed;
-	top: 0;
-	padding: 20px;
+html {
+	scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+	margin-top: 10%;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+a, p {
+	font-family: 'Open Sans', sans-serif;
+}
+a:link, a:visited {
+	color:rgb(88, 88, 88);
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	/*text-decoration: underline;
+	background-color: #895DDB;*/
 }
 
-nav a:active {
-	color: #ff0000;
+nav {
+	position: fixed;
+	top: 0;
+	width:100%;
+	height: 27px;
+	padding: 20px;
+	margin:auto;
+	/*background-color: rgb(238, 196, 255);*/
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2); /*horiz vert blur dunno color*/
+}
+nav a, nav li, nav ul {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#myname {
+	color: black;
+}
+#toppages li, a {
+	padding-inline-end: 20px;
+}
+#topicons {
+	list-style-type: none;
+	float:right;
+	text-align: center;
+	position: relative;
+	margin-right: 3%;
 }
 
 main {
-    border: 2px;
-    padding: 20px;
-    margin-top: 30px;
+	margin-top: 70px;
+	width: 100%;
+	min-height: 400px;
 }
 
+#previews {
+	margin-left: 15%;
+	margin-top: 6%;
+}
+
+.greeting {
+	margin-left: 15%;
+	margin-right: 15%;
+}
 .greeting h1 {
-	color: #895DDB;
+	color: #b97cff;
+}
+.greeting p {
+	font-size: 20px;
+}
+
+#music {
+	margin-left: 15%;
+	margin-top: 5%;
 }
 
 footer {
-	background-color: #5E3F96;
+	background-color: #703ea8;
+	position:relative;
 	width: 100%;
+	min-height: 100px;
+	margin: 0px;
+	bottom:0%;
 }
-
 footer p {
 	padding: 20px;
 	color: #ffffff;
 }
-
 footer i {
 	margin: 20px;
 	color: #ffffff;	
 }
-
 footer i:hover {
 	color: #000000;
 }
