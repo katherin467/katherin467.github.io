@@ -31,7 +31,7 @@ nav {
 	height: 27px;
 	padding: 20px;
 	margin:auto;
-	/*background-color: rgb(238, 196, 255);*/
+	background-color: rgb(255, 255, 255);
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2); /*horiz vert blur dunno color*/
 }
 nav a, nav li, nav ul {
@@ -56,14 +56,12 @@ nav a, nav li, nav ul {
 }
 
 main {
-	margin-top: 70px;
-	width: 100%;
 	min-height: 400px;
+	width:100%;
 }
-
-#previews {
-	margin-left: 15%;
-	margin-top: 6%;
+#mainhome {
+	width: 100%;
+	min-height: 850px;
 }
 
 .greeting {
@@ -77,10 +75,35 @@ main {
 	font-size: 20px;
 }
 
+/* home */
+#previews {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 6%;
+}
+#previews img {
+	width: 25%;
+	display: inline-block;
+	padding: 10px;
+}
+#previews p {
+	width: 60%;
+	display: inline-block;
+	float:right;
+	padding: 10px;
+}
+
+.project {
+	min-height: 260px;
+}
+/********/
+
+/* about */
 #music {
 	margin-left: 15%;
 	margin-top: 5%;
 }
+/*********/
 
 footer {
 	background-color: #703ea8;
