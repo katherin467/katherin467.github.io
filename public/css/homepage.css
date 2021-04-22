@@ -82,12 +82,12 @@ main {
 	margin-top: 6%;
 }
 #previews img {
-	width: 25%;
+	width: 40%;
 	display: inline-block;
 	padding: 10px;
 }
 #previews p {
-	width: 60%;
+	width: 50%;
 	display: inline-block;
 	float:right;
 	padding: 10px;
