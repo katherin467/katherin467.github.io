@@ -25,6 +25,12 @@ app.get('/about', function(req, res) {
 app.get('/contact', function(req, res) {
     res.sendFile(__dirname + '/contact.html')
 });
+app.get('/garyiswin', function(req, res) {
+    res.sendFile(__dirname + '/garyiswin.html')
+})
+app.get('/insight', function(req, res) {
+    res.sendFile(__dirname + '/insight.html')
+})
 
 app.listen(app.get('port'), () => {
     console.log("Express server listening on port " + app.get('port'));

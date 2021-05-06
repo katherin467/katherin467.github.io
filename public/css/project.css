@@ -81,26 +81,46 @@ main {
 	font-size: 20px;
 }
 
-/* home */
-#previews {
+#body {
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-top: 6%;
+    text-align:center;
+}
+#body img {
+    width: 40%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#body #header-img {
+    width:100%;
+}
+#avatars {
+    margin: auto;
+    width: 100%;
+    padding: 10px;    
+    text-align: center;
+}
+#body #avatar {
+    width:10%;
+    padding:10px;
+}
+#body #avatar img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
 }
 
-.project {
-	/*min-height: 260px;*/
-	border-style: solid;
-	border-color:#000000;
-	border-radius: 8px;
-	box-shadow: 5px 5px;
-	color: black;
-	padding: 3%;
-	overflow:hidden;
-	width:73%;
-	margin-left:10%;
-	margin-right:10%;
+
+
+video {
+    display: block;
+    margin: 0 auto;
+    width:auto;
 }
+
 #projimg {
 	width: 50%;
 	float:left;
@@ -122,35 +142,6 @@ main {
 	padding: 10px;
 }*/
 
-
-
-
-/********/
-
-/* about */
-#music {
-	margin-left: 15%;
-	margin-top: 5%;
-}
-/*********/
-
-/* contact */
-#contactbtns {
-	margin-left: 40%;
-}
-#contactbtn {
-	border-radius: 100%;
-	width: 30px;
-	height: 30px;
-	border: 2px solid black;
-	text-align : center;
-  	padding : 20px;
-	float: left;
-}
-.contacticon {
-	font-size: 30px;
-	color: black;
-}
 
 footer {
 	background-color: #703ea8;
