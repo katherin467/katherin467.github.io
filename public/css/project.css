@@ -50,7 +50,7 @@ nav a, nav li, nav ul {
 #myname {
 	color: black;
 }
-#toppages li, a {
+#toppages li, #topicons li {
 	padding-inline-end: 20px;
 }
 #topicons {
