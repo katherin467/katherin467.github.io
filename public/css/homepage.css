@@ -24,11 +24,17 @@ a:hover {
 	background-color: #895DDB;*/
 }
 .grow { 
-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
 }
 .grow:hover { 
-transform: scale(.95); 
+	transform: scale(.95); 
 }
+.icongrow {
+	transition: all .2s ease-in-out; 
+}
+.icongrow:hover { 
+	transform: scale(.85); 
+}	
 
 nav {
 	position: fixed;
