@@ -6,7 +6,7 @@ html, body {
     padding: 0;
 }
 body {
-	margin-top: 10%;
+	margin-top: 7%;
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat', sans-serif;
@@ -84,7 +84,7 @@ main {
 #body {
 	margin-left: 15%;
 	margin-right: 15%;
-	margin-top: 6%;
+	margin-top: 0%;
 }
 #bodyimg {
     text-align:center;
