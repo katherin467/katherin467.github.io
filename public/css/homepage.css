@@ -6,7 +6,7 @@ html, body {
     padding: 0;
 }
 body {
-	margin-top: 10%;
+	margin-top: 12%;
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat', sans-serif;
@@ -77,8 +77,8 @@ main {
 }
 
 .greeting {
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 .greeting h1 {
 	color: #b97cff;
@@ -89,9 +89,9 @@ main {
 
 /* home */
 #previews {
-	margin-left: 15%;
-	margin-right: 15%;
-	margin-top: 6%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5%;
 }
 
 .project {
