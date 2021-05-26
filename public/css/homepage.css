@@ -41,6 +41,7 @@ nav {
 	top: 0;
 	width:100%;
 	height: 27px;
+	z-index: 1;
 	padding: 20px;
 	margin:auto;
 	background-color: rgb(255, 255, 255);
