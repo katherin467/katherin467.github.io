@@ -20,9 +20,10 @@ a:link, a:visited {
 }
 a:hover {
 	color: #000000;
-	/*text-decoration: underline;
-	background-color: #895DDB;*/
+	/*text-decoration: underline;*/
+	/*background-color: #895DDB;*/
 }
+
 .grow { 
 	transition: all .2s ease-in-out; 
 }

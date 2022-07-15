@@ -1,0 +1,239 @@
+@mapurple : #bc82fd;
+@malitepurple: #d7b5ff;
+html {
+	scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+	margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  //min-height: 12%//100vh;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+a, p {
+	font-family: 'Open Sans', sans-serif;
+}
+a:link, a:visited {
+	color:rgb(110, 110, 110);
+	text-decoration: none;
+}
+.fadeinpurple {
+  transition: color 0.5s ease-in-out;
+}
+.fadeinpurple:hover {
+  color: @mapurple;
+}
+
+/*** sliding underline ***/ 
+.pagelink {
+    &:after {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: @mapurple;
+        transform: scaleX(0);
+        transform-origin: bottom right; //comment this out to emerge from center
+        transition: transform 0.5s;
+    }
+
+    &:hover {
+        &:after {
+            transform-origin: bottom left; //comment this out to emerge from center
+            transform: scaleX(1);
+        }
+        color: black;
+    }
+}
+/*** sliding highlight ***/ 
+/*
+.pagelink {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    display: block;
+    transition: width .5s ease-in-out;
+  }
+  &:hover {
+    color: black;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+.pagelink {
+    z-index: 3;
+    &:after {
+        background: rgba(231, 110, 167, .4);
+        height: 1.25em;
+        z-index: -1;
+    }
+    &:hover {
+        color: black;
+    }
+}*/
+
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(.95); 
+}
+.icongrow {
+	transition: all .2s ease-in-out; 
+}
+.icongrow:hover { 
+	transform: scale(.85); 
+}	
+
+nav {
+	position: fixed;
+	top: 0;
+	width:100%;
+	height: 27px;
+	z-index: 1;
+	padding: 20px;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2); /*horiz vert blur dunno color*/
+  overflow:hidden;
+}
+nav a {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	font-size: 20px;
+	margin: 0 auto;
+}
+nav #hamburg {
+  display: none;
+  margin-right: 45px;
+}
+
+
+/** Responsive Navbar **/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 730px) {
+  nav a:not(:first-child) {display: none;}
+  nav #hamburg {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 730px) {
+  nav.responsive {position: relative;}
+  nav.responsive #hamburg {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+#myname {
+	color: rgb(48, 48, 48);
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+#myname {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    height: 0px;
+    width: 0%;
+    display: block;
+    transition: width .5s ease-in-out;
+  }
+  &:hover {
+    color: black;
+    &:after {
+      width: 110%;
+    }
+  }
+}
+#myname {
+    z-index: 3;
+    &:after {
+        background: @malitepurple;
+        height: 1.25em;
+        z-index: -1;
+    }
+    &:hover {
+        color: black;
+    }
+}
+
+.pagelink {
+	margin-inline-start: 30px;
+}
+
+.navicon {
+	float: right;
+	text-align: right;
+	position: relative;
+	margin-inline-end: 35px;
+}
+
+main {
+	/*min-height: 400px;*/
+	width:100%;
+}
+#mainhome {
+	width: 100%;
+	/*min-height: 850px;*/
+    flex: 1;
+}
+
+.greeting {
+	margin-left: 20%; 
+	margin-right: 20%;
+}
+.greeting h1 {
+	color: @mapurple;
+}
+.greeting p {
+	font-size: 20px;
+}
+
+.footer {
+	background-color: #703ea8;
+	/*position:relative;*/
+	width: 100%;
+	/*min-height: 100px;*/
+	/*margin: 0px;
+	bottom:0%;*/
+    flex-shrink: 0;
+}/*
+.footer p {
+	padding: 20px;
+	color: #ffffff;
+}
+.footer i {
+	margin: 20px;
+	color: #ffffff;	
+}
+.footer i:hover {
+	color: #000000;
+}*/

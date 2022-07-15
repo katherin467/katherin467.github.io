@@ -5,67 +5,84 @@
         <meta charset="UTF-8" />
         <meta name="description" content="My website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="public/css/general.css" rel="stylesheet">
+		<link href="public/css/general.less" rel="stylesheet/less">
         <link href="public/css/homepage.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
         <script src="public/js/project.js"></script>
     </head>
 	
 	<body>
     	<header>		
      	</header>
+		
+     	<nav class="navbar" id="myTopnav">
+			<a href="#page-top" id="myname"><big>Katherine Lim</big></a>
 
-     	<nav class="navbar">
-			<a href="#page-top" id="myname" style="font-weight:bold;">Katherine Lim</a>
-			<ul id="toppages">
-				<li>
-					<a class="pagelink" href="/">Home</a>
-				</li>
-				<li>
-					<a class="pagelink" href="#projects">Projects</a>
-				</li>
-				<li>
-					<a class="pagelink" href="about">About</a>
-				</li>
-				<li>
-					<a class="pagelink" href="contact">Contact</a>
-				</li>
-			</ul>
-			<ul id="topicons">
-				<li>
-					<a class="icon" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
-						<i class="fab fa-linkedin-in"></i>
-					</a>
-				</li>
-				<li>
-					<a class="icon" href="mailto: katherinelim467@gmail.com">
-						<i class="far fa-envelope"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
-						<i class="fab fa-facebook-f"></i>	    	
-					</a>
-				</li>
-				<!--
-				<li>
-					<a href="https://www.github.com/katherin467" target="_blank">
-						<i class="fab fa-github"></i>
-					</a>
-				</li>
-				-->
-			</ul>
+			<a class="pagelink fadeinpurple" id="navhome" href="/">Home</a>
+			<a class="pagelink fadeinpurple" href="#projects">Projects</a>
+			<a class="pagelink fadeinpurple" id="navabout" href="about">About</a>
+			<a class="pagelink fadeinpurple" id="navcontact" href="contact">Contact</a>
+
+			<a class="navicon fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+				<i class="fab fa-linkedin-in"></i>
+			</a>
+			<a class="navicon fadeinpurple" href="mailto: katherinelim467@gmail.com">
+				<i class="far fa-envelope"></i>
+			</a>
+			<a class="navicon fadeinpurple" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
+				<i class="fab fa-facebook-f"></i>	    	
+			</a>
+
+			<a href="javascript:void(0);" class="icon fadeinpurple" id="hamburg" onclick="myFunction()">
+    			<i class="fa fa-bars"></i>
+  			</a>
+			<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+				function myFunction() {
+ 					var x = document.getElementById("myTopnav");
+  					if (x.className === "navbar") {
+    					x.className += " responsive";
+  					} else {
+    					x.className = "navbar";
+  					}
+				}
+			</script>
 		</nav>
-  
+	
+		<!-- failed attempt to make reusable navbar -->
+		<div id="nav-placeholder">
+		</div>
+		<!--
+		<script>
+		$(function(){
+		  $("#nav-placeholder").load("nav.html");
+		});
+		</script>
+		end of Navigation bar-->
+		<!--
+		<script src="//code.jquery.com/jquery.min.js"></script>
+		<script>
+			$.get("nav.html", function(data){
+			    $("#nav-placeholder").replaceWith(data);
+			});
+		</script>
+		-->
+
 		<main id="mainhome">
 
 	     	<div class="greeting">
-     			<h1><big>Hi, I'm Katie.</big></h1>
-     			<p>I'm a student at UC San Diego studying Computer Science. I'll be joining Amazon as an SDE intern this summer. I also currently tutor introductory CS with Juni Learning. Thanks for visiting my page!</p>
+				<div id="text">
+					<h1><big>Hi, I'm Katie.</big></h1>
+     				<p>I'm a student at UC San Diego majoring in Computer Science and minoring in Cognitive Science. Currently searching for a position as a software engineer, or a UI/UX designer. Thanks for visiting my page!</p>
+				</div>
+				
+     			
      		</div>
 			
 			<a name="projects"></a>
@@ -88,7 +105,6 @@
 					</div>
 				</div>
 				</a>
-
 				<br>
 				<br>
 
@@ -109,12 +125,15 @@
 				</a>
 				<br>
 				<br>
+
+				
 			</div>
 			
 		</main>
 
-    	<footer>
-    		
+    	<footer class="footer">  
+    		<p> resume </p>
+			<p> made with love <3 </p>
     	</footer>
 	</body>
 </html>

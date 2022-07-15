@@ -5,13 +5,14 @@
         <meta charset="UTF-8" />
         <meta name="description" content="Contact me" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="public/css/general.css" rel="stylesheet">
-        <link href="public/css/homepage.css" rel="stylesheet">
+		<link href="public/css/general.less" rel="stylesheet/less">
+        <link href="public/css/contact.less" rel="stylesheet/less">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
         <script src="public/js/project.js"></script>
     </head>
 	
@@ -61,28 +62,28 @@
      			<p>this page is still in progress but in the meantime check <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="padding:0 0; text-decoration: underline;" target="_blank">this</a> cool thing out!</p>
      		</div>
 
-			 <div id="contactbtns">
-				<div id="contactbtn" class="icongrow">
-					<a class="contactlink" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
-						<i class="fab fa-linkedin-in contacticon"></i>
-					</a>
-				</div>
-				<div id="contactbtn" class="icongrow">
-					<a class="contactlink" href="mailto: katherinelim467@gmail.com">
-						<i class="far fa-envelope contacticon"></i>
-					</a>					
-				</div>
-				<div id="contactbtn" class="icongrow">
-					<a class="contactlink" href="https://www.github.com/katherin467" target="_blank">
-						<i class="fab fa-github contacticon"></i>
-					</a>
-				</div>
-				<div id="contactbtn" class="icongrow">
-					<a class="contactlink" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
-						<i class="fab fa-facebook-f contacticon"></i>	    	
-					</a>
-				</div>
-			 </div>
+			<ul id="contactbtns">
+				<li>
+					<a class="contactlink icongrow contactbtn" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+					<i class="fab fa-linkedin-in contacticon"></i>
+				</a>
+				</li>
+				<li>
+					<a class="contactlink icongrow contactbtn" href="mailto: katherinelim467@gmail.com">
+					<i class="far fa-envelope contacticon"></i>
+				</a>
+				</li>
+				<li>
+				<a class="contactlink icongrow contactbtn" href="https://www.github.com/katherin467" target="_blank">
+					<i class="fab fa-github contacticon"></i>
+				</a>	
+				</li>				
+				<li>
+				<a class="contactlink icongrow contactbtn" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
+					<i class="fab fa-facebook-f contacticon"></i>	    	
+				</a>	
+				</li>
+			</ul>
 		</main>
 
     	<footer>

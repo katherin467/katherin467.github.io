@@ -5,13 +5,14 @@
         <meta charset="UTF-8" />
         <meta name="description" content="About Katherine Lim" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="public/css/general.css" rel="stylesheet">
-        <link href="public/css/homepage.css" rel="stylesheet">
+		<link href="public/css/general.less" rel="stylesheet/less">
+        <link href="public/css/about.less" rel="stylesheet/less">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/less@4" ></script> 
         <script src="public/js/project.js"></script>
     </head>
 	
@@ -57,9 +58,17 @@
   
 		<main>
 	     	<div class="greeting">
-     			<h1><big>About Me</big></h1>
-     			<p>Hi there, I'm Katie! I was born and raised in San Diego, and currently I'm a student at UC San Diego pursuing my bachelor's degree in Computer Science.</p>
-                <p>Outside of studying, I'm always down to grab boba, take relaxing walks down La Jolla Shores, and spend my quiet mornings in coffee shops. </p>
+				<h1><big>About Me</big></h1>
+				<div class="greetbody">
+					<div>
+						<p>Hi there, I'm Katie! I was born and raised in San Diego, and currently I'm a student at UC San Diego pursuing my bachelor's degree in Computer Science, along with a minor in Cognitive Science.</p>
+                		<p>Outside of studying, I'm always down to grab boba, take relaxing walks down La Jolla Shores, and spend my quiet mornings in coffee shops. </p>
+					</div>
+     				<div id="pic">
+						<img src="public/assets/it-me.jpg" id="profilepic" alt="Katherine Lim profile picture" width="30%">
+					</div>
+				</div>
+				
      		</div>
             <!--
             <div id="music">
