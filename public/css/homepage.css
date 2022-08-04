@@ -9,6 +9,9 @@
 #text {
 	margin-right: 1.5em;
 }
+#description {
+	line-height: 40px;
+}
 #pic {
 	margin-left:2em;
 }

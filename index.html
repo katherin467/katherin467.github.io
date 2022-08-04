@@ -5,13 +5,16 @@
         <meta charset="UTF-8" />
         <meta name="description" content="My website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<link href="public/css/general.less" rel="stylesheet/less">
         <link href="public/css/homepage.css" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
+        
+		<script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
         <script src="public/js/project.js"></script>
@@ -21,24 +24,23 @@
     	<header>		
      	</header>
 		
-     	<nav class="navbar" id="myTopnav">
-			<a href="#page-top" id="myname"><big>Katherine Lim</big></a>
-
-			<a class="pagelink fadeinpurple" id="navhome" href="/">Home</a>
-			<a class="pagelink fadeinpurple" href="#projects">Projects</a>
-			<a class="pagelink fadeinpurple" id="navabout" href="about">About</a>
-			<a class="pagelink fadeinpurple" id="navcontact" href="contact">Contact</a>
-
-			<a class="navicon fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+     	<nav class="navbar" id="myTopnav">					
+			<a href="#page-top" class ="navelem fadeinpurple" id="myname"><big>Katherine Lim</big></a>
+			<a class="pagelink purpleline navelem" id="navhome" href="/">Home</a>
+			<a class="pagelink purpleline navelem" href="#projects">Projects</a>
+			<a class="pagelink purpleline navelem" id="navabout" href="about">About</a>
+			<a class="pagelink purpleline navelem" id="navcontact" href="contact">Contact</a>	
+			
+			<a class="navicon navelem fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
 				<i class="fab fa-linkedin-in"></i>
 			</a>
-			<a class="navicon fadeinpurple" href="mailto: katherinelim467@gmail.com">
-				<i class="far fa-envelope"></i>
+			<a class="navicon navelem fadeinpurple" href="mailto: katherinelim467@gmail.com">
+					<i class="far fa-envelope"></i>
 			</a>
-			<a class="navicon fadeinpurple" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
-				<i class="fab fa-facebook-f"></i>	    	
+			<a class="navicon navelem fadeinpurple" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
+					<i class="fab fa-facebook-f"></i>	    	
 			</a>
-
+			
 			<a href="javascript:void(0);" class="icon fadeinpurple" id="hamburg" onclick="myFunction()">
     			<i class="fa fa-bars"></i>
   			</a>
@@ -79,7 +81,7 @@
 	     	<div class="greeting">
 				<div id="text">
 					<h1><big>Hi, I'm Katie.</big></h1>
-     				<p>I'm a student at UC San Diego majoring in Computer Science and minoring in Cognitive Science. Currently searching for a position as a software engineer, or a UI/UX designer. Thanks for visiting my page!</p>
+     				<p id="description">I'm a student at UC San Diego majoring in Computer Science and minoring in Cognitive Science. Currently searching for a position as a software engineer, or a UI/UX designer. Thanks for visiting my page!</p>
 				</div>
 				
      			
