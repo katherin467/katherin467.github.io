@@ -93,6 +93,7 @@ nav {
   justify-content: space-between;
 	top: 0;
 	width: 100%;
+	max-width: 100%;
 	z-index: 1;
 	padding: 10px;
 	margin: auto;
