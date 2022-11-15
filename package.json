@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/katherin467/katherin467.github.io#readme",
   "dependencies": {
+    "create-react-app": "^5.0.1",
     "express": "^4.17.1",
     "handlebars": "^4.7.7"
   }

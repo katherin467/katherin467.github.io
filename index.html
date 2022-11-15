@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="page-top">
     <head>
-        <title>🌷 Katherine Lim</title>
+        <title>✨ Katherine Lim</title>
         <meta charset="UTF-8" />
         <meta name="description" content="My website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,32 +21,34 @@
     </head>
 	
 	<body>
-    	<header>		
+    	<header>
      	</header>
 		
      	<nav class="navbar" id="myTopnav">					
-			<a href="#page-top" class ="navelem fadeinpurple" id="myname"><big>Katherine Lim</big></a>
-			<a class="pagelink purpleline navelem" id="navhome" href="/">Home</a>
-			<a class="pagelink purpleline navelem" href="#projects">Projects</a>
-			<a class="pagelink purpleline navelem" id="navabout" href="about">About</a>
-			<a class="pagelink purpleline navelem" id="navcontact" href="contact">Contact</a>	
-			
-			<a class="navicon navelem fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
-				<i class="fab fa-linkedin-in"></i>
-			</a>
-			<a class="navicon navelem fadeinpurple" href="mailto: katherinelim467@gmail.com">
+			<span class="pagelinks">
+				<a class="navelem" id="logo" href="#page-top">
+					<img src="./public/assets/personallogo.png" width="80px" style="margin:auto;">
+				</a>
+				<a class="navelem pagelink purpleline" id="navhome" href="/">Home</a>
+				<a class="navelem pagelink purpleline" href="#projects">Work</a>
+				<a class="navelem pagelink purpleline" id="navabout" href="about">About</a>
+			</span>
+
+			<span class="navicons">
+				<a class="navicon navelem fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+				<a class="navicon navelem fadeinpurple" href="mailto: katherinelim467@gmail.com">
 					<i class="far fa-envelope"></i>
-			</a>
-			<a class="navicon navelem fadeinpurple" href="https://www.facebook.com/profile.php?id=100006835337298" target="_blank">
-					<i class="fab fa-facebook-f"></i>	    	
-			</a>
-			
-			<a href="javascript:void(0);" class="icon fadeinpurple" id="hamburg" onclick="myFunction()">
+				</a>
+			</span>
+				
+			<a href="javascript:void(0);" class="fadeinpurple" id="hamburg" onclick="expandHamburg()">
     			<i class="fa fa-bars"></i>
   			</a>
 			<script>
 				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-				function myFunction() {
+				function expandHamburg() {
  					var x = document.getElementById("myTopnav");
   					if (x.className === "navbar") {
     					x.className += " responsive";
@@ -80,8 +82,15 @@
 
 	     	<div class="greeting">
 				<div id="text">
-					<h1><big>Hi, I'm Katie.</big></h1>
-     				<p id="description">I'm a student at UC San Diego majoring in Computer Science and minoring in Cognitive Science. Currently searching for a position as a software engineer, or a UI/UX designer. Thanks for visiting my page!</p>
+					<h1>Hi, I'm Katie.</h1>
+					<!--ok don't waste time with your name and stuff that recruiters 
+						probably assume already. get to the point. what do you do? who are you? 
+						what's your work-->
+     				<!--UI/UX Designer for Web & Mobile-->				
+					<p id="description">I'm a student at UC San Diego majoring in Computer 
+						Science and minoring in Cognitive Science. Currently searching for a 
+						position as a software engineer, or a UI/UX designer. Thanks for visiting 
+						my page!</p>
 				</div>
 				
      			
@@ -135,7 +144,7 @@
 
     	<footer class="footer">  
     		<p> resume </p>
-			<p> made with love <3 </p>
+			<p> ©2022 by Katherine Lim, made with love 💜</p>
     	</footer>
 	</body>
 </html>
