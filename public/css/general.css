@@ -1,3 +1,261 @@
+@font-face {
+  font-family: 'Almarai Reg';
+  src: url('../assets/Almarai/Almarai-Regular.ttf');
+}
+@font-face {
+  font-family: 'Almarai Lite';
+  src: url('../assets/Almarai/Almarai-Light.ttf');
+}
+@font-face {
+  font-family: 'Tenor Sans';
+  src: url('../assets/tenorsans.ttf');
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('../assets/Graphik-Font-Family/GraphikRegular.otf');
+}
+
+html {
+	scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+	margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 300px;
+  /*min-height: 12%//100vh;*/
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Tenor Sans', sans-serif;
+}
+a, p {
+	font-family: 'Graphik'/*'Malgun Gothic'/*'Almarai Lite'*/, sans-serif;
+}
+a:link, a:visited {
+	color:rgb(110, 110, 110);
+	text-decoration: none;
+}
+p {
+  line-height: 30px;
+}
+
+/*** color fade-in ***/
+.fadeinpurple {
+  transition: color 0.3s ease-in-out;
+}
+.fadeinpurple:hover {
+  color: #bc82fd;
+}
+/*** sliding underline ***/ 
+.purpleline {   
+      color: #bc82fd;
+      text-decoration: none;
+      background-image: linear-gradient(#bc82fd, #bc82fd);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.3s ease-in-out;
+}
+.purpleline:hover,
+.purpleline:focus,
+.purpleline:active {
+      background-size: 100% 0.1em;
+      background-position-x: 0%;
+}
+
+/*** grow/shrink hover ***/
+.grow {
+	transition: all .2s ease-in-out;
+}
+.grow:hover {
+	transform: scale(.98);
+}
+.icongrow {
+	transition: all .2s ease-in-out; 
+}
+.icongrow:hover { 
+	transform: scale(.88); 
+}	
+
+
+/*** NAVBAR STUFF ***/
+nav {
+	position: fixed;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	padding: 10px;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+	/*box-shadow: 0 2px 6px 0 rgba(0,0,0,.2); /*horiz vert blur dunno color*/
+  overflow: hidden;
+}
+.pagelinks {
+  /*display: inline;
+  //vertical-align: middle;*/
+  margin-left: 4em;
+}
+
+.navelem {
+	display: inline;
+  vertical-align: middle;
+	font-size: 20px;
+	/*position: relative;
+	//margin: 0 auto;*/
+}
+#logo.navelem {
+  font-size: 0;
+  margin-left: 4em;
+}
+nav .pagelink{
+  padding: 10px;
+	margin-inline-start: 50px;  
+}
+nav #hamburg {
+  display: none;
+}
+.navicons {
+  align-items: flex-end;
+  margin-right: 0;
+  display: inline;
+}
+.navicon {
+	/*
+	//float: right;
+  //align-self: flex-end;//right;
+  //display: inline;
+  //vertical-align: middle;
+  //margin-right:auto;
+  //text-align: center;
+  //align-self: middle;
+  //position: relative;*/
+	margin-inline-end: 35px;
+}
+
+/** Responsive Navbar **/
+/* When the screen is less than x pixels wide, hide all links, except for the first one ("Katherine Lim"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 675px) {
+  nav .navicons, .pagelink {
+    display: none;
+  }
+  nav #hamburg {
+    display: inline;
+    margin-right: 50px;
+    margin-top: 30px;
+    align-self: baseline;
+  }
+  .pagelinks {
+    margin: auto;
+    padding-left: 40px;
+  }
+  .pagelink, .navicons {
+    /*clear: both;
+    //height: 0px;    
+	//transition: height .4s ease;*/
+    overflow: hidden;
+  }
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) 
+@media screen and (max-width: 675px) {*/
+  nav.responsive {position: fixed;}
+  /*
+  //nav.responsive #hamburg, #logo {
+    //position: static;
+    //display:inline;
+    
+    & {
+      color: @mapurple;
+      text-decoration: none;
+      background-image: linear-gradient(@mapurple, @mapurple);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.3s ease-in-out;
+      }
+    //align-self:baseline;
+  //}
+  //nav.responsive .pagelink, nav.responsive .navicons {
+    //height: 20px;
+  //}
+  */
+  nav.responsive .pagelinks a{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+  }
+  nav.responsive .pagelink {
+    padding-top: 20px;
+  }
+  /*
+  //nav.responsive .navicons {
+  //  display: flex;
+    //flex-direction: column;
+  //}*/
+}
+
+
+main {
+	/*min-height: 400px;*/
+	width:100%;
+}
+#mainhome {
+	width: 100%;
+	/*min-height: 850px;*/
+  flex: 1;
+}
+
+.greeting {
+	/*margin-left: 20%; 
+	margin-right: 20%;*/
+  display: flex;
+}
+.greeting h1 {
+	color: #bc82fd;
+  font-size: 40px;
+}
+.greeting p {
+	font-size: 20px;
+}
+
+.footer {
+	background-color: #bc82fd;
+	/*position:relative;*/
+	width: 100%;
+	/*min-height: 100px;*/
+	/*margin: 0px;
+	bottom:0%;*/
+  flex-shrink: 0;
+}
+.footer p {
+  text-align: center;
+}
+/*
+.footer p {
+	padding: 20px;
+	color: #ffffff;
+}
+.footer i {
+	margin: 20px;
+	color: #ffffff;	
+}
+.footer i:hover {
+	color: #000000;
+}*/
+
+/******************** original general.css contents *****************
 html {
 	scroll-behavior: smooth;
 }
@@ -20,8 +278,6 @@ a:link, a:visited {
 }
 a:hover {
 	color: #000000;
-	/*text-decoration: underline;*/
-	/*background-color: #895DDB;*/
 }
 
 .grow { 
@@ -47,7 +303,7 @@ nav {
 	padding: 20px;
 	margin:auto;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2); /*horiz vert blur dunno color*/
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
 }
 nav a, nav li, nav ul {
 	display: inline-block;
@@ -111,4 +367,4 @@ footer i {
 }
 footer i:hover {
 	color: #000000;
-}
+}*/
