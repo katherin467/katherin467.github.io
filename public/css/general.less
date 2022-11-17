@@ -191,7 +191,7 @@ nav .pagelink{
 nav #hamburg {
   display: none;
 }
-nav .xicon {
+nav .fa-xmark {
   display: none;
 }
 .navicons {
@@ -215,7 +215,6 @@ nav .xicon {
 /* When the screen is less than x pixels wide, hide all links, except for the first one ("Katherine Lim"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 675px) {
   nav .navicons, .pagelink {
-    //height:
     display: none;
   }
   nav #hamburg {
@@ -224,56 +223,30 @@ nav .xicon {
     margin-top: 30px;
     align-self: baseline;
   }
-  
   .pagelinks {
     margin: auto;
     padding-left: 40px;
   }
   .pagelink, .navicons {
-    //clear: both;
-    //height: 0px;
     overflow: hidden;
-    //transition: height .4s ease;
   }
-//}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-//@media screen and (max-width: 675px) {
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   nav.responsive {position: fixed;}
-  nav.responsive .xicon {
-    display:inline;
-    margin-right: 0px;
-    //margin-top: 30px;
-    //width: 20px;
-    //height: 20px;
+  nav.responsive .fa-xmark {
+    display: inline;
+    margin-right: 1px;
+    width: 60px;
+    height: 20px;
     align-self: baseline;
-  }/*
-  nav.responsive .xiconss {
-    //width: 20px;
   }
-  nav.responsive #hamburg {
-    margin-right: 45px;
+  /*nav.responsive .xiconss {
+    //width: 20px;
+    margin-left: 0;
   }*/
+  
   nav.responsive .fa-bars {display: none;}
-  //nav.responsive #hamburg, #logo {
-    //position: static;
-    //display:inline;
-    /*
-    & {
-      color: @mapurple;
-      text-decoration: none;
-      background-image: linear-gradient(@mapurple, @mapurple);
-      background-size: 0% 0.1em;
-      background-position-y: 100%;
-      background-position-x: 100%;
-      background-repeat: no-repeat;
-      transition: background-size 0.3s ease-in-out;
-      }*/
-    //align-self:baseline;
-  //}
-  //nav.responsive .pagelink, nav.responsive .navicons {
-    //height: 20px;
-  //}
+  
   nav.responsive .pagelinks a{
     display: flex;
     flex-direction: column;
