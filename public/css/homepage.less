@@ -1,10 +1,18 @@
+//@madarkpurple: #8d34f2;
+@mapurple:     #bc82fd;
+@mamidpurple:  #DCBDFF;
+@malitepurple: #F5ECFF;
+@mayellow:     #FFF578;
+//@maliteyellow: #FFFDEA;
+@maonyx:       #3F4045;
+
 /* home */
 #navhome {
-	color: #bc82fd;
+	color: @mapurple;
 }
 
 .greeting {
-	background-color: #F5ECFF;
+	background-color: @malitepurple;
 	/*background-image: linear-gradient(#e7d2ff,#bc82fd)*/
 	min-height: 30em;
 	width: 100%;
@@ -23,18 +31,16 @@
 #pic {
 	margin-left:2em;
 }
-/*
-#profilepic {
-	width:300px;
-  	height:300px;
-  	object-fit:cover;
-	border-radius: 50%;
-}*/
 
 #previews {
+    margin-left: 50px;
+    margin-right: 50px;
 	display: grid; 
-	align-items: center;
-	justify-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+	grid-template-columns: repeat(auto-fill, 450px);
+    grid-template-rows: 400px;
 }
 
 .project {
@@ -46,21 +52,21 @@
 	color: black;
 	padding: 3%;
 	overflow:hidden;
-	width:30em;
+	width: 400px;
+    height: 300px;
 	vertical-align: middle;
-	
-	/*margin-left:10%;
-	margin-right:10%;*/
+    justify-self: center;
+    align-self: center;
 }
 #projimg {
 	width: 50%;
-	float:left;
+	//float:left;
 }
 #projp {
 	overflow:hidden;
 }
 #previews img {
 	width: 90%;
-	display: inline-block;
+	//display: inline-block;
 	vertical-align: middle;
 }
