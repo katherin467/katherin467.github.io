@@ -49,6 +49,9 @@ a:link, a:visited {
 	color:rgb(110, 110, 110);
 	text-decoration: none;
 }
+a:hover {
+  color: black;
+}
 p {
   line-height: 30px;
 }
@@ -191,6 +194,9 @@ nav .pagelink{
 nav #hamburg {
   display: none;
 }
+nav .hamicon {
+  display: none;
+}
 nav .fa-xmark {
   display: none;
 }
@@ -247,7 +253,7 @@ nav .fa-xmark {
   
   nav.responsive .fa-bars {display: none;}
   
-  nav.responsive .pagelinks a{
+  nav.responsive .pagelinks a {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -256,10 +262,16 @@ nav .fa-xmark {
   nav.responsive .pagelink {
     padding-top: 20px;
   }
-  //nav.responsive .navicons {
-  //  display: flex;
-    //flex-direction: column;
-  //}
+  nav.responsive .hamicons {
+    display: flex;
+    flex-direction:row;
+    padding-top: 25px; // how much is too much?
+    padding-bottom: 15px;
+  }
+  nav.responsive .hamicon {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
   
 }
 
