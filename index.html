@@ -25,11 +25,11 @@
 		<div class="navdiv">
      	<nav class="navbar" id="myTopnav">					
 			<span class="pagelinks">
-				<a class="navelem" id="logo" href="#page-top">
+				<a class="navelem" id="logo" href="#page-top" onclick="closeHamburg()">
 					<img src="./public/assets/personallogo.png" width="80px" style="margin:auto;">
 				</a>
-				<a class="navelem pagelink purpleline" id="navhome" href="/">Home</a>
-				<a class="navelem pagelink purpleline" href="#projects">Work</a>
+				<a class="navelem pagelink purpleline" id="navhome"  href="/">Home</a>
+				<a class="navelem pagelink purpleline" id="navwork"  href="#projects" onclick="closeHamburg()">Work</a>
 				<a class="navelem pagelink purpleline" id="navabout" href="about">About</a>
 				
 				<!-- HIDDEN when not hamburg -->
@@ -75,8 +75,9 @@
 				</div>     			
      		</div>
 			
-			<a name="projects"></a>
 			
+			<a name="projects" id="projectslink"></a>
+
 			<div id="projectdiv">
 				<div id="previews">
 					<div class="project grow" id="insight">

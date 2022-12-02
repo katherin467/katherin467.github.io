@@ -24,15 +24,38 @@ function expandHamburg() {
 		hamburgOpen = false;
 	}
 }
+function closeHamburg() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "navbar responsive") {
+		hamburgOpen = false;
+		x.className = "navbar";
+		console.log(x.className);
+	}
+}
+
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	var currentScrollPos = window.pageYOffset;
+	var projectLinkRect = document.getElementById("projectslink").getBoundingClientRect();
+	var projectLinkPos = projectLinkRect.bottom;
+	console.log("currentScrollPos: " + currentScrollPos);
+	console.log("projectLinkPos: " + projectLinkPos);
+
+	// Show/hide navbar on scroll
 	if (prevScrollpos > currentScrollPos) {
 		document.getElementById("myTopnav").style.top = "0";
 	} else {
 		if (hamburgOpen == false && currentScrollPos > 100) {
 		document.getElementById("myTopnav").style.top = "-100px";}
+	}
+	// Change nav link color if past that point
+	if (projectLinkPos < 0) {
+		document.getElementById("navwork").style.color = '#bc82fd';
+		document.getElementById("navhome").style.color = 'black';
+	} else {
+		document.getElementById("navwork").style.color = 'black';
+		document.getElementById("navhome").style.color = '#bc82fd';
 	}
 	prevScrollpos = currentScrollPos;
 }
