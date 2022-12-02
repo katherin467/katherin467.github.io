@@ -37,10 +37,10 @@ function closeHamburg() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	var currentScrollPos = window.pageYOffset;
-	var projectLinkRect = document.getElementById("projectslink").getBoundingClientRect();
-	var projectLinkPos = projectLinkRect.bottom;
-	console.log("currentScrollPos: " + currentScrollPos);
-	console.log("projectLinkPos: " + projectLinkPos);
+	if (document.getElementById("projectslink") != null) {
+		var projectLinkRect = document.getElementById("projectslink").getBoundingClientRect();
+		var projectLinkPos = projectLinkRect.bottom;
+	}
 
 	// Show/hide navbar on scroll
 	if (prevScrollpos > currentScrollPos) {
@@ -49,13 +49,16 @@ window.onscroll = function() {
 		if (hamburgOpen == false && currentScrollPos > 100) {
 		document.getElementById("myTopnav").style.top = "-100px";}
 	}
-	// Change nav link color if past that point
-	if (projectLinkPos < 0) {
-		document.getElementById("navwork").style.color = '#bc82fd';
-		document.getElementById("navhome").style.color = 'black';
-	} else {
-		document.getElementById("navwork").style.color = 'black';
-		document.getElementById("navhome").style.color = '#bc82fd';
+	// Change nav link colors if we're on homepage and we're past project point
+	if (document.getElementById("projectslink") !== null) {
+		if (projectLinkPos < 0) {
+				document.getElementById("navwork").style.color = '#bc82fd';
+				document.getElementById("navhome").style.color = 'black';
+			} else {
+				document.getElementById("navwork").style.color = 'black';
+				document.getElementById("navhome").style.color = '#bc82fd';
+			}
 	}
+	
 	prevScrollpos = currentScrollPos;
 }
