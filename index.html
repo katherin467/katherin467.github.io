@@ -27,9 +27,10 @@
 				<a class="navelem" id="logo" href="#page-top" onclick="closeHamburg()">
 					<img src="./public/assets/personallogo.png" width="80px" style="margin:auto;">
 				</a>
-				<a class="navelem pagelink purpleline" id="navhome"  href="/">Home</a>
+				<!--<a class="navelem pagelink purpleline" id="navhome"  href="/">Home</a>-->
 				<a class="navelem pagelink purpleline" id="navwork"  href="#projects" onclick="closeHamburg()">Work</a>
 				<a class="navelem pagelink purpleline" id="navabout" href="about">About</a>
+				<a class="navelem pagelink purpleline" id="navresume" href="">Resume</a>
 				
 				<!-- HIDDEN when not hamburg -->
 				<div class="hamicons">
@@ -66,18 +67,40 @@
 						probably assume already. get to the point. what do you do? who are you? 
 						what's your work-->
      				<!--UI/UX Designer for Web & Mobile-->				
-					<p id="description">I'm a student at UC San Diego majoring in Computer 
-						Science and minoring in Cognitive Science. Currently searching for a 
-						position as a software engineer, or a UI/UX designer. Thanks for visiting 
-						my page!</p>
-				</div>     			
+					<p id="description">I'm a UI/UX designer passionate about creating clear, meaningful, and inclusive design solutions for all </p>
+				</div>
+				<div class="star">
+					<svg>
+						<mask id='m' fill='#fff'>
+							<rect id='r' width='100%' height='100%'/>
+							<circle id='c' r='50' fill='#000'/>
+							<use xlink:href='#c' x='100%'/>
+							<use xlink:href='#c' y='100%'/>
+							<use xlink:href='#c' x='100%' y='100%'/>
+						  </mask>
+						  <use xlink:href='#r' fill='#f90' mask='url(#m)'/>
+					</svg>
+				</div>
+				<!--
+				<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+						<filter id="round">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />    
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+							<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+						</filter>
+					</defs>
+				</svg>  	
+			-->		
      		</div>
 			
 			
 			<a name="projects" id="projectslink"></a>
 
 			<div id="projectdiv">
+				<h2>My Work</h2>
 				<div id="previews">
+					<!--
 					<div class="project grow" id="insight">
 						<a href="insight">
 							<h3>Insight</h3>
@@ -104,14 +127,52 @@
 							</div>
 						</a>
 					</div>
+				-->
+					
+					<a href="">
+						<div class="project grow" id="easyaccess">
+							<h3>EasyAccess</h3>
+							<div id="projimg">
+								<!--<img src="public/assets/garyiswin/garyiswin.png">-->
+							</div>
+							<div id="projp">
+								<p>Finding accessible places</p>
+							</div>
+						</div>						
+					</a>
+
+					<a href="">
+						<div class="project grow" id="packetcraft">
+							<h3>Bluetooth Microphone/Receiver Solution</h3>
+							<div id="projimg">
+								<!--<img src="public/assets/garyiswin/garyiswin.png">-->
+							</div>
+							<div id="projp">
+								<p></p>
+							</div>
+						</div>						
+					</a>
+
+
 				</div>
 			</div>
 
+			<!-- testing react.js -->
+			<div class="reactbutton" id="like-button-root"></div>
+			<LikeButton className="reactbutton" />
+			
+			<!-- Adding react.js -->
+			<!-- before deployment, change development.js with production.min.js-->
+			<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+			<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+			<!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+			<script src="/public/js/like-button.js" ></script>
 		</main>
 
     	<footer class="footer">  
     		<p> resume </p>
-			<p> ©2022 by Katherine Lim, made with love 💜</p>
+			<p> ©2023 by Katherine Lim, made with love 💜</p>
     	</footer>
+		
 	</body>
 </html>

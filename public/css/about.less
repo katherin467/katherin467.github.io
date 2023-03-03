@@ -10,20 +10,35 @@
 	color: @mapurple;
 }
 
-#music {
-	margin-left: 15%;
-	margin-top: 5%;
+.greeting {
+	background-color: @mapurple;
+	display: block;
+	padding: 20px;	
+	width: 100%;
+	align-content: center;
 }
 
 #profilepic {
-	margin-right: 10%;
+	//margin-right: 10%;
 	width:300px;
   	height:400px;
   	object-fit:cover;
 	//border-radius: 50%;
+	border: 2em solid #FFFFFF;
 }
 
-.greetbody {
+#bio {
 	display: flex;
-	gap: 50px;
+	column-gap: 50px;
+	//margin-left: 20%;
+	align-items: center;
+	justify-content: center;
+}
+#biotext p{
+	background-color: #FFFFFF;
+	width: 30em;
+	padding: 20px;
+}
+#biotext p {
+	font-size: 15px;
 }

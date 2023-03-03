@@ -52,11 +52,11 @@ window.onscroll = function() {
 	// Change nav link colors if we're on homepage and we're past project point
 	if (document.getElementById("projectslink") !== null) {
 		if (projectLinkPos < 0) {
-				document.getElementById("navwork").style.color = '#bc82fd';
-				document.getElementById("navhome").style.color = 'black';
+				document.getElementById("navwork").style.color = '#8c5ed3';
+				//document.getElementById("navhome").style.color = 'black';
 			} else {
 				document.getElementById("navwork").style.color = 'black';
-				document.getElementById("navhome").style.color = '#bc82fd';
+				//document.getElementById("navhome").style.color = '#8c5ed3';
 			}
 	}
 	

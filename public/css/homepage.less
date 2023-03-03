@@ -1,10 +1,20 @@
 /***** Color scheme *****/
 @onyx:        #3F4045;
-@mapurple:    #bc82fd;
+@mapurple:    #8c5ed3;
 @accent:      #FFF256;
 @neutral:     #FFF7DA;
 @white:       #FFFFFF;
 @black:       #000000;
+
+@malitepurple: #c59ff0;
+@accentmuted: #e5dd80;
+
+@red: #e66465;
+@blue: #9198e5;
+@blue2: rgb(59, 84, 228);
+@green: rgb(78, 201, 78);
+@pink: pink;
+
 
 /* home */
 #navhome {
@@ -12,26 +22,58 @@
 }
 
 .greeting {
-	background-color: @neutral;
-	/*background-image: linear-gradient(#e7d2ff,#bc82fd)*/
-	min-height: 30em;
 	top: -100px;
-	width: 100%;
+	//background-color: @mapurple;
+	
+	//background: linear-gradient(-45deg, @mapurple, @malitepurple, @accentmuted, @accent);
+	//animation: gradient 5s ease infinite;
+	
+	background: 
+		/*	
+		radial-gradient(circle at bottom, white, transparent 70%),    
+		linear-gradient(to top, @mapurple 0%, transparent 70%),    
+		linear-gradient(to bottom, transparent, rgba(white, 0.4) 20%), blue;  */
+
+		
+		linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),
+		linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),
+		linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%);
+		
+  	//animation: bg 30s infinite;
+
+	//min-height: 30em;
+	//width: 100%;
+	//background-size: 400% 400%;
+	//min-height: 70vh;
+}
+
+// color cycle
+@keyframes bg {
+  0%, 100% { background-color: @blue2; }
+  25% { background-color: @green; }
+  50% { background-color: @accentmuted; }
+  75% { background-color: @pink; }
+}
+
+.greeting {
+	padding-inline: 15em;
+	padding-top: 7em;
+	padding-bottom: 7em;
 }
 #text h1 {
 	font-size: 70px;
 }
+/*
 #text {
-	margin-top: 10em;
-	margin-left: 15em;
-	margin-right: 15em;
-}
+	margin-top: 7em;
+	margin-left: 13em;
+	margin-right: 13em;
+}*/
 #description {
+	color: @onyx;
 	line-height: 40px;
 }
-#pic {
-	margin-left:2em;
-}
+
 
 #projectdiv {
 	margin-left: 50px;
@@ -52,10 +94,10 @@
 .project {
 	/*min-height: 260px;*/
 	border-style: solid;
-	border-color:#000000;
+	border-color: @onyx;
 	/*border-radius: 8px;
 	box-shadow: 5px 5px;*/
-	color: black;
+	color: @onyx;
 	padding: 3%;
 	overflow:hidden;
 	width: 400px;
