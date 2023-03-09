@@ -133,7 +133,19 @@ p {
 .icongrow:hover { 
 	transform: scale(.88); 
 }	
-
+.toptext {
+	//font-size: 70px;
+	animation: fadeSlideIn 1.5s;
+	transition-timing-function: ease-out;
+}
+@keyframes fadeSlideIn {
+	from {opacity:0; margin-left:-100%;}
+	to {opacity:1; margin-left: 0%;}
+}
+@keyframes fadeIn {
+	from {opacity:0;}
+	to {opacity:1;}
+}
 
 /*** NAVBAR STUFF ***/
 nav {
