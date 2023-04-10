@@ -55,10 +55,11 @@ a, p {
 }
 a:link, a:visited {
 	color: @onyx;
-	text-decoration: none;
+	//text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 a:hover {
-  color: @onyx;
+  color: @mapurple;
 }
 p {
   line-height: 30px;
@@ -160,6 +161,10 @@ nav {
 	padding: 10px;
 	background-color: rgb(255, 255, 255);
 }
+nav a:link, nav a:visited {
+	color: @onyx;
+	text-decoration: none;
+}
 .pagelinks {
   margin-left: 4em;
 }
@@ -175,6 +180,20 @@ nav {
 nav .pagelink{
   padding: 10px;
 	margin-inline-start: 50px;  
+  & {
+    background-image: linear-gradient(@mapurple, @mapurple);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+    }
+  &:hover,
+  &:focus,
+  &:active {
+    background-size: 100% 0.1em;
+    background-position-x: 0%;
+  }
 }
 .navicons {
   align-items: flex-end;
