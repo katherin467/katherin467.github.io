@@ -134,19 +134,8 @@ p {
 .icongrow:hover { 
 	transform: scale(.88); 
 }	
-.toptext {
-	//font-size: 70px;
-	animation: fadeSlideIn 1.5s;
-	transition-timing-function: ease-out;
-}
-@keyframes fadeSlideIn {
-	from {opacity:0; margin-left:-100%;}
-	to {opacity:1; margin-left: 0%;}
-}
-@keyframes fadeIn {
-	from {opacity:0;}
-	to {opacity:1;}
-}
+
+
 
 /*** NAVBAR STUFF ***/
 nav {
@@ -280,6 +269,24 @@ main {
   flex: 1;
 }
 
+.titlediv {
+  overflow:hidden;      // for sliding in
+}
+.toptext {
+	//font-size: 70px;
+	animation: fadeSlideIn 1.5s;
+	transition-timing-function: ease-out;
+}
+@keyframes fadeSlideIn {
+	from {opacity:0; margin-left:-100%;}
+	to {opacity:1; margin-left: 0%;}
+}
+@keyframes fadeIn {
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+
 .greeting {
 	/*margin-left: 20%; 
 	margin-right: 20%;*/
@@ -289,22 +296,48 @@ main {
 	color: @onyx;
   font-size: 40px;
 }
+
 .greeting p {
 	font-size: 20px;
 }
 
 .footer {
-	background-color: @mapurple;
-	/*position:relative;*/
-	width: 100%;
-	/*min-height: 100px;*/
-	/*margin: 0px;
-	bottom:0%;*/
+	background: 
+    color(@onyx);
   flex-shrink: 0;
+  text-align: center;
+  //padding: 1em;
 }
-.footer p {
+#footerconnect {
+  padding: 2em;
+  //margin: 1em;
+}
+#footerlinks {
+  margin-top: 1em;
+}
+.footer a {
+  background-color: white;
+  padding: 15px; 
+  color: @onyx;
+  text-decoration: none;
+  margin-inline: 1em;
+  font-weight:bold;
+}
+#footerbottom {
+  padding: 1em;
+}
+.footer h1, .footer p {
+  color:white;
+  margin: 0;
+}
+
+// centering the linkedin icon
+#linkedin {
+  display: inline-block;
   text-align: center;
 }
+
+
 /*
 .footer p {
 	padding: 20px;
