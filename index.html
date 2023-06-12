@@ -2,9 +2,14 @@
 <html id="page-top">
     <head>
         <title>✨ Katherine Lim</title>
+		<link rel="icon" href="./public/assets/personallogo.png">
+
         <meta charset="UTF-8" />
         <meta name="description" content="My website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="public/css/materialize.min.css"  media="screen,projection"/>
 		
 		<link href="public/css/general.less" rel="stylesheet/less">
         <link href="public/css/homepage.less" rel="stylesheet/less">
@@ -65,44 +70,32 @@
 					<div class="titlediv">
 						<h1 class="toptext">Hi, I'm Katie.</h1>
 					</div>	
+					<div class="star">
+						<svg viewbox="0 0 10 10">
+							<defs>
+								<linearGradient id="starGrad">
+									<stop offset="0%" stop-color="rgb(255, 255, 255)"/>
+									<stop offset="100%" stop-color="rgb(255, 255, 255)"/>      
+								</linearGradient>
+							</defs>
+							<path fill="url(#starGrad)" d="M5 1 Q5.8 4.2 9 5 Q5.8 5.8 5 9 Q4.2 5.8 1 5 Q4.2 4.2 5 1z" />  
+						</svg>	
+					</div>			
 					<!--ok don't waste time with your name and stuff that recruiters 
 						probably assume already. get to the point. what do you do? who are you? 
 						what's your work-->
 					<!--UI/UX Designer for Web & Mobile-->				
-					<p id="description">I'm a UI/UX designer passionate about building clear, meaningful, and inclusive design solutions for all. Having recently graduated, I'm currently looking for work within the field of UX design and development.</p>					
+					<p id="description">I'm a UI/UX designer passionate about building clear, meaningful, and inclusive design solutions for all. Having recently graduated, I'm currently looking for a position within the field of UX design and development.</p>					
 					<p id="description">Thanks for visiting! Feel free to reach out to me through <a href="https://www.linkedin.com/in/katherinealim/" target="_blank">LinkedIn</a>
 						or <a href="mailto: katherinelim467@gmail.com">email</a>!</p>
-					</div>
-				<div class="star">
-					<svg>
-						<mask id='m' fill='#fff'>
-							<rect id='r' width='100%' height='100%'/>
-							<circle id='c' r='50' fill='#000'/>
-							<use xlink:href='#c' x='100%'/>
-							<use xlink:href='#c' y='100%'/>
-							<use xlink:href='#c' x='100%' y='100%'/>
-						  </mask>
-						  <use xlink:href='#r' fill='#f90' mask='url(#m)'/>
-					</svg>
 				</div>
-				<!--
-				<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-					<defs>
-						<filter id="round">
-							<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />    
-							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-							<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-						</filter>
-					</defs>
-				</svg>  	
-			-->		
      		</div>
 			
 			
 			<a name="projects" id="projectslink"></a>
 
 			<div id="projectdiv">
-				<h2>My Work</h2>
+				<h3>My Work</h3>
 				<div id="previews">
 					<!--
 					<div class="project grow" id="insight">
@@ -134,8 +127,8 @@
 				-->
 					
 					<a href="">
-						<div class="project grow" id="easyaccess">
-							<h3>EasyAccess</h3>
+						<div class="project grow card-panel" id="easyaccess">
+							<h4>EasyAccess</h4>
 							<div id="projimg">
 								<!--<img src="public/assets/garyiswin/garyiswin.png">-->
 							</div>
@@ -147,7 +140,7 @@
 
 					<a href="">
 						<div class="project grow" id="packetcraft">
-							<h3>Bluetooth Microphone/Receiver Solution</h3>
+							<h4>Bluetooth Microphone/Receiver Solution</h4>
 							<div id="projimg">
 								<!--<img src="public/assets/garyiswin/garyiswin.png">-->
 							</div>
@@ -164,7 +157,12 @@
 			<!-- testing react.js -->
 			<div class="reactbutton" id="like-button-root"></div>
 			<LikeButton className="reactbutton" />
+
+			<div class="show-on-small" style="display:none;">hiiiiiiii</div>
 			
+			<!--JavaScript at end of body for optimized loading-->
+			<script type="text/javascript" src="public/js/materialize.min.js"></script>
+
 			<!-- Adding react.js -->
 			<!-- before deployment, change development.js with production.min.js-->
 			<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -175,7 +173,7 @@
 
     	<footer class="footer">  
 			<div id="footerconnect">
-				<h1>Let's connect!</h1>
+				<h3>Let's connect!</h3>
 				<div id="footerlinks">
 					<a class="fadeinpurple" href="https://drive.google.com/file/d/14fUOYaPj11W4F__-HGtyy3yDL96ma3ka/view?usp=sharing" target="_blank" >Resume</a>
 					<a class="fadeinpurple" id="linkedin" href="https://www.linkedin.com/in/katherinealim/" target="_blank">

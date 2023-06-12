@@ -47,7 +47,7 @@ window.onscroll = function() {
 		document.getElementById("myTopnav").style.top = "0";
 	} else {
 		if (hamburgOpen == false && currentScrollPos > 100) {
-		document.getElementById("myTopnav").style.top = "-100px";}
+		document.getElementById("myTopnav").style.top = "-18%";}
 	}
 	// Change nav link colors if we're on homepage and we're past project point
 	if (document.getElementById("projectslink") !== null) {

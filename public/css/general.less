@@ -1,5 +1,5 @@
 /***** Color scheme *****/
-@onyx:        #171717;
+@onyx:        #1e1e1e;
 @mapurple:    #8c5ed3;
 @accent:      #FFF256;
 @neutral:     #FFF7DA;
@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: 300px;
+  //min-width: 300px;
   //min-height: 12%//100vh;
 }
 h1, h2, h3, h4, h5 {
@@ -62,7 +62,7 @@ a:hover {
   color: @mapurple;
 }
 p {
-  line-height: 30px;
+  line-height: 2em;
 }
 
 /*** color fade-in ***/
@@ -136,7 +136,6 @@ p {
 }	
 
 
-
 /*** NAVBAR STUFF ***/
 nav {
 	position: fixed;
@@ -149,26 +148,28 @@ nav {
 	z-index: 1;
 	padding: 10px;
 	background-color: rgb(255, 255, 255);
+  height: auto !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
 }
 nav a:link, nav a:visited {
 	color: @onyx;
 	text-decoration: none;
 }
 .pagelinks {
-  margin-left: 4em;
+  margin-left: 3.125em;
 }
-
 .navelem {
   vertical-align: middle;
-	font-size: 20px;
+	font-size: 1.3em;
 }
 #logo.navelem {
   font-size: 0;
-  margin-left: 4em;
+  margin-left: 3.125em;
 }
 nav .pagelink{
   padding: 10px;
-	margin-inline-start: 50px;  
+	margin-inline-start: 3.125em;  
   & {
     background-image: linear-gradient(@mapurple, @mapurple);
     background-size: 0% 0.1em;
@@ -190,7 +191,12 @@ nav .pagelink{
   display: inline;
 }
 .navicon {
-	margin-inline-end: 35px;
+	margin-inline-end: 2em;
+}
+nav i {
+  line-height: 0 !important;
+  height: 0 !important;
+  font-size: 1.2em;
 }
 /**** hidden for now ****/
 nav #hamburg {
@@ -213,30 +219,30 @@ nav .fa-xmark {
   }
   nav #hamburg {
     display: inline;
-    margin-right: 50px;
-    margin-top: 30px;
-    align-self: baseline;
+    margin-right: 2em;
+    justify-content: center;
+    //line-height:1 !important;
   }
   .pagelinks {
     margin: auto;
-    padding-left: 40px;
+    padding-left: 2.5em;
   }
   .pagelink, .navicons {
     overflow: hidden;
   }
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  nav.responsive {position: fixed;}
-  nav.responsive .fa-xmark {
-    display: inline;
-    margin-right: 1px;
-    width: 60px;
-    height: 20px;
-    align-self: baseline;
+  nav.responsive {
+    position: fixed; 
+    align-items: baseline;
   }
-  
-  nav.responsive .fa-bars {display: none;}
-  
+  nav.responsive .fa-xmark {
+    display: flex;
+    padding-top: 2.2em;
+  }
+  nav.responsive .fa-bars {
+    display: none;
+  }
   nav.responsive .pagelinks a {
     display: flex;
     flex-direction: column;
@@ -244,17 +250,18 @@ nav .fa-xmark {
     text-align: center;
   }
   nav.responsive .pagelink {
-    padding-top: 20px;
+    padding-top: 1.5em;
+    padding-bottom: 1.1em;
   }
   nav.responsive .hamicons {
     display: flex;
     flex-direction:row;
-    padding-top: 25px; // how much is too much?
-    padding-bottom: 15px;
+    padding-top: 2.8em; // how much is too much?
+    padding-bottom: 1.4em;
   }
   nav.responsive .hamicon {
-    font-size: 20px;
-    padding-inline: 15px;
+    font-size: 1.4em;
+    padding-inline: 1em;
   }
 }
 
@@ -273,7 +280,6 @@ main {
   overflow:hidden;      // for sliding in
 }
 .toptext {
-	//font-size: 70px;
 	animation: fadeSlideIn 1.5s;
 	transition-timing-function: ease-out;
 }
@@ -287,19 +293,14 @@ main {
 }
 
 
-.greeting {
-	/*margin-left: 20%; 
-	margin-right: 20%;*/
-  display: flex;
-}
 .greeting h1 {
 	color: @onyx;
-  font-size: 40px;
+  font-size: 2.3em;
+}
+.greeting p {
+	font-size: 1.3em;
 }
 
-.greeting p {
-	font-size: 20px;
-}
 
 .footer {
 	background: 
@@ -309,56 +310,62 @@ main {
   //padding: 1em;
 }
 #footerconnect {
-  padding: 2em;
+  padding: 4em;
   //margin: 1em;
 }
 #footerlinks {
-  margin-top: 1em;
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.15; 
 }
 .footer a {
   background-color: white;
-  padding: 15px; 
+  padding: 1em; 
   color: @onyx;
   text-decoration: none;
   margin-inline: 1em;
+  margin-top: 1em;
   font-weight:bold;
+  vertical-align: middle;
+  //align-items: center;
 }
 #footerbottom {
   padding: 1em;
 }
-.footer h1, .footer p {
+.footer h3, .footer p {
   color:white;
   margin: 0;
 }
-
 // centering the linkedin icon
-#linkedin {
+#linkedin a{
+  text-align: center;
+}
+#linkedin i {
   display: inline-block;
   text-align: center;
 }
-
-
-/*
-.footer p {
-	padding: 20px;
-	color: #ffffff;
-}
 .footer i {
-	margin: 20px;
-	color: #ffffff;	
+  line-height: 0 !important;
 }
-.footer i:hover {
-	color: #000000;
-}*/
+
 
 .star { position: relative; 
 margin: 1em;
 min-height:10em;}
-
+/*
 svg {
   position: absolute;
   width: 100%;
   height: 100%;
+}*/
+svg{
+  //display:block; margin:0 auto;
+  width:30%; 
+  height:auto;
+  position: relative;
+  //z-index: -1;
 }
 
 .reactbutton {
