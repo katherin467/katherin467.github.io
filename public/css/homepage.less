@@ -22,7 +22,7 @@
 }
 
 .greeting {
-	top: -100px;
+	//top: -100px;
 	//background-color: @mapurple;
 	
 	//background: linear-gradient(-45deg, @mapurple, @malitepurple, @accentmuted, @accent);
@@ -89,23 +89,18 @@
 
 .greeting {
 	padding-inline: 13em;
-	padding-top: 6em;
+	padding-top: 7em;
 	padding-bottom: 6em;
 	//overflow: hidden;
 }
 
-// Responsive homepage
-@media screen and (max-width: 675px) {
-	.greeting {
-	  padding-inline: 2em;
-	}
-}
+
 
 .greetingtext {
 	position: relative;
 }
 .titlediv h1 {
-	font-size: 70px;
+	font-size: 4.5em;
 }
 .greeting p {
 	animation: fadeIn 1s;
@@ -126,9 +121,11 @@
 
 
 #projectdiv {
-	margin-left: 50px;
-    margin-right: 50px;
-	padding: 20px;
+	//margin-left: 50px;
+    //margin-right: 50px;
+	padding-inline: 13em;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 #previews {
@@ -136,8 +133,8 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-	grid-template-columns: repeat(auto-fill, 450px);
-    grid-template-rows: 400px;
+	grid-template-columns: repeat(auto-fill, 30em);
+    grid-template-rows: 30em;
 }
 
 .project {
@@ -147,10 +144,10 @@
 	/*border-radius: 8px;
 	box-shadow: 5px 5px;*/
 	color: @onyx;
-	padding: 3%;
+	//margin: 3%;
 	overflow:hidden;
-	width: 25em;//400px;
-    height: 300px;
+	width: 30em;//400px;
+    height: 25em;
 	vertical-align: middle;
     justify-self: center;
     align-self: center;
@@ -166,4 +163,18 @@
 	width: 90%;
 	//display: inline-block;
 	vertical-align: middle;
+}
+
+// Responsive homepage
+@media screen and (max-width: 675px) {
+	.greeting {
+	  padding-inline: 3em;
+	}
+	#projectdiv {
+		padding-inline: 3em;
+	}
+	.project {
+		width: 20em;
+		
+	}
 }
