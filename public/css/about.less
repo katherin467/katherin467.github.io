@@ -57,28 +57,23 @@
 	width: 30em;
 	padding: 20px;
 }
+#biotext a{
+	text-decoration: underline;
+}
 // different timings
-#biotext #p1 {
+#biotext #p1, #biotext #p2, #biotext #p3{
 	font-size: 15px;
+	opacity:0;
+	transition-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay:1s;
+}
+#p1 {
 	animation: fadeIn 1s;
-	transition-timing-function: ease-out;
-	opacity:0;
-	animation-fill-mode: forwards;
-	animation-delay:1s;
 }
-#biotext #p2 {
-	font-size: 15px;
-	animation: fadeIn 2s;
-	transition-timing-function: ease-out;
-	opacity:0;
-	animation-fill-mode: forwards;
-	animation-delay:1s;
+#p2 {
+	animation: fadeIn 2.5s;
 }
-#biotext #p3 {
-	font-size: 15px;
-	animation: fadeIn 3s;
-	transition-timing-function: ease-out;
-	opacity:0;
-	animation-fill-mode: forwards;
-	animation-delay:1s;
+#p3 {
+	animation: fadeIn 4s;
 }

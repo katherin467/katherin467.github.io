@@ -27,10 +27,13 @@ app.get('/contact', function(req, res) {
 });
 app.get('/garyiswin', function(req, res) {
     res.sendFile(__dirname + '/garyiswin.html')
-})
+});
 app.get('/insight', function(req, res) {
     res.sendFile(__dirname + '/insight.html')
-})
+});
+app.get('/easyaccess', function(req, res) {
+    res.sendFile(__dirname + '/easyaccess.html')
+});
 
 app.listen(app.get('port'), () => {
     console.log("Express server listening on port " + app.get('port'));
