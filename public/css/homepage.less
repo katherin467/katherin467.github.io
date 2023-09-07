@@ -1,5 +1,5 @@
 /***** Color scheme *****/
-@onyx:        #3F4045;
+@onyx:        #1e1e1e;
 @mapurple:    #8c5ed3;
 @accent:      #FFF256;
 @neutral:     #FFF7DA;
@@ -16,10 +16,10 @@
 @pink: pink;
 
 
-/* home */
+/* home 
 #navhome {
 	color: @mapurple;
-}
+}*/
 
 .greeting {
 	//top: -100px;
@@ -88,7 +88,7 @@
 }*/
 
 .greeting {
-	padding-inline: 13em;
+	padding-inline: 17em;
 	padding-top: 7em;
 	padding-bottom: 6em;
 	//overflow: hidden;
@@ -105,38 +105,63 @@
 .greeting p {
 	animation: fadeIn 1s;
 	transition-timing-function: ease-out;
-	opacity:0;
+	opacity: 0;
 	animation-fill-mode: forwards;
-	animation-delay:1s;
+	animation-delay: 1s;
 }
 
 
-#description {
-	color: @onyx;
-	line-height: 40px;
-}
 #description a {
 	text-decoration:underline;
 }
+.topsvg {
+	//margin-left: 30em;
+	margin-left: -5em;
+	margin-top: 0em;  
+	transform: scale(1);
+	transform-box: fill-box;
+	transform-origin: center;
+	transition-timing-function: ease-out;
+	opacity: 0;
+	animation: fadeBounceIn .6s linear 1s forwards;
+}
+.topsvg2 {
+	right: 10%;
+	-webkit-transform: translateY(-20%);
+	-ms-transform: translateY(-20%);
+	transform: translateY(-20%);
+	
+	//margin-right: 0%;
+	margin-bottom: 0%;  
+	bottom: 0%;
 
+	transform: scale(1);
+	transform-box: fill-box;
+	transform-origin: center;
+	transition-timing-function: ease-out;
+	opacity: 0;
+	animation: fadeBounceIn .6s linear 1.2s forwards;
+}
 
 #projectdiv {
 	//margin-left: 50px;
     //margin-right: 50px;
-	padding-inline: 13em;
+	padding-inline: 17em;
 	padding-top: 3em;
 	padding-bottom: 3em;
 }
 
 #previews {
+	//padding-inline: 5em;
 	display: grid; 
     align-items: center;
     justify-content: center;
     justify-items: center;
-	grid-template-columns: repeat(auto-fill, 30em);
-    grid-template-rows: 30em;
+	grid-template-columns: repeat(auto-fill, 100%);
+    //grid-template-rows: 50em;
 }
 
+// not really used atm /////
 .project {
 	/*min-height: 260px;*/
 	border-style: solid;
@@ -152,29 +177,27 @@
     justify-self: center;
     align-self: center;
 }
-#projimg {
-	width: 50%;
-	//float:left;
-}
 #projp {
 	overflow:hidden;
 }
-#previews img {
-	width: 90%;
-	//display: inline-block;
-	vertical-align: middle;
+//////////////////////////
+
+
+.projimg {
+	width: 100%;
+}
+#previews a {
+	margin-top: 2em;
 }
 
 // Responsive homepage
+@media screen and (max-width: 960px) {
+	.greeting, #projectdiv {
+		padding-inline: 10em;
+	}
+}
 @media screen and (max-width: 675px) {
-	.greeting {
-	  padding-inline: 3em;
-	}
-	#projectdiv {
-		padding-inline: 3em;
-	}
-	.project {
-		width: 20em;
-		
+	.greeting, #projectdiv {
+		padding-inline: 4em;
 	}
 }
