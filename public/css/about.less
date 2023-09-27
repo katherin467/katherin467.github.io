@@ -11,89 +11,44 @@
 }
 
 .greeting {
-	background: 
-	linear-gradient(
-    to right,
-    rgb(152, 255, 176) ,
-    #d5b0ff,
-	rgb(255, 214, 233) 
-  );	
-	
-	//linear-gradient(45deg, rgba(0, 64, 255, 0.6), rgba(255, 255, 255, 0.3) 40.71%), 
-		//linear-gradient(225deg, rgba(0, 64, 255, 0.6), rgba(255, 255, 255, 0.3) 40.71%), 
-		//linear-gradient(180deg, @mapurple, rgba(255, 255, 255, 0.3) 100%);
-		//linear-gradient(315deg, rgba(255, 146, 239, 0.7), rgba(255, 255, 255, 0.3) 50.71%);
-	//display: flex;
-	//flex-direction: column;
-	//padding: 20px;	
-	//width: 100%;
-	//align-content: center;
+	background:	linear-gradient(135deg, rgba(72, 237, 111, 0.7), rgba(255, 255, 255, 0.2) 40%),
+				linear-gradient(315deg, rgba(255, 92, 231, 0.7), rgba(255, 255, 255, 0.4) 40%), 
+				#bb82fdcb;
 	padding-inline: 13em;
 	padding-top: 1em;
 	padding-bottom: 5em;
 }
 
-#pic {
-	align-self: center;
-	
-	animation: fadeIn 2s;
-	transition-timing-function: ease-out;
-	opacity:0;
-	animation-fill-mode: forwards;
-	animation-delay:1s;
-}
-#profilepic {
-	width:300px;
-  	height:350px;
-  	object-fit:cover;
-	//border-radius: 50%;
-	//border: 1.5em solid #FFFFFF;
-}
-
-
 #bio {
 	display: grid;
-	grid-template-columns: 60% 40%;
-	column-gap: 1.5em;
+	grid-template-columns: 100%;
+	row-gap: 1.5em;
+}
+#bio div {
+	justify-self: center;
 }
 #biotext {
-	display: flex;
-	//row-gap: 40px;
-	//margin-left: 20%;
-	//align-items: center;
-	//justify-content: center;
-	//flex-direction: row;
-	flex-wrap: wrap;
-	//align-items:center;
 	padding: 30px;	
 	background-color: #FFFFFF;
-
 }
 #biotext p{
-	//width: 30em;
-	//padding-: 20px;
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
 #biotext a{
 	text-decoration: underline;
 }
-// different timings
-#biotext #p1, #biotext #p2, #biotext #p3{
-	font-size: 15px;
-	opacity:0;
-	transition-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	animation-delay:1s;
+
+#pic {
+	animation-delay: 1.5s;
+	max-width: 380px;
+	max-height: 430px;	
 }
-#p1 {
-	animation: fadeIn 1s;
-}
-#p2 {
-	animation: fadeIn 2.5s;
-}
-#p3 {
-	animation: fadeIn 4s;
+#profilepic {
+  	object-fit: cover;
+	max-width: 100%;
+	height: auto;
+	width: auto;
 }
 
 
@@ -102,31 +57,9 @@
 	.greeting {
 		padding-inline: 10em;
 	}
-	#bio {
-		display: grid;
-		grid-template-columns: 100%;
-		row-gap: 1.5em;
-	}
-	#bio div {
-		justify-self: center;
-	}
-	#biotext {
-		display: block;
-	}
 }
 @media screen and (max-width: 675px) {
 	.greeting {
 		padding-inline: 4em;
-	}
-	#bio {
-		display: grid;
-		grid-template-columns: 100%;
-		row-gap: 1.5em;
-	}
-	#bio div {
-		justify-self: center;
-	}
-	#biotext {
-		display: block;
 	}
 }

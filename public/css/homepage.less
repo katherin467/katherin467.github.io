@@ -16,11 +16,6 @@
 @pink: pink;
 
 
-/* home 
-#navhome {
-	color: @mapurple;
-}*/
-
 .greeting {
 	//top: -100px;
 	//background-color: @mapurple;
@@ -69,7 +64,7 @@
   25% { background-color: @green; }
   50% { background-color: @accentmuted; }
   75% { background-color: @pink; }
-}*//*
+}
 @keyframes bg {
 	0%, 100% { //fill-opacity:1; 
 		background: 
@@ -92,22 +87,10 @@
 	padding-top: 7em;
 	padding-bottom: 6em;
 	//overflow: hidden;
+	display: flex;
 }
-
-
-
 .greetingtext {
 	position: relative;
-}
-.titlediv h1 {
-	font-size: 4.5em;
-}
-.greeting p {
-	animation: fadeIn 1s;
-	transition-timing-function: ease-out;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	animation-delay: 1s;
 }
 
 
@@ -118,41 +101,34 @@
 	//margin-left: 30em;
 	margin-left: -5em;
 	margin-top: 0em;  
+
 	transform: scale(1);
 	transform-box: fill-box;
 	transform-origin: center;
 	transition-timing-function: ease-out;
 	opacity: 0;
-	animation: fadeBounceIn .6s linear 1s forwards;
+	animation: fadeBounceIn .6s linear 2s forwards;
 }
 .topsvg2 {
 	right: 10%;
-	-webkit-transform: translateY(-20%);
-	-ms-transform: translateY(-20%);
-	transform: translateY(-20%);
-	
-	//margin-right: 0%;
-	margin-bottom: 0%;  
-	bottom: 0%;
+	display: inline-block;
+	align-self: flex-end;
 
 	transform: scale(1);
 	transform-box: fill-box;
 	transform-origin: center;
 	transition-timing-function: ease-out;
 	opacity: 0;
-	animation: fadeBounceIn .6s linear 1.2s forwards;
+	animation: fadeBounceIn .6s linear 2.2s forwards;
 }
 
 #projectdiv {
-	//margin-left: 50px;
-    //margin-right: 50px;
 	padding-inline: 17em;
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: 4em;
+	padding-bottom: 4em;
 }
 
 #previews {
-	//padding-inline: 5em;
 	display: grid; 
     align-items: center;
     justify-content: center;
@@ -161,7 +137,7 @@
     //grid-template-rows: 50em;
 }
 
-// not really used atm /////
+///// not really used atm /////
 .project {
 	/*min-height: 260px;*/
 	border-style: solid;
@@ -169,7 +145,6 @@
 	/*border-radius: 8px;
 	box-shadow: 5px 5px;*/
 	color: @onyx;
-	//margin: 3%;
 	overflow:hidden;
 	width: 30em;//400px;
     height: 25em;
@@ -180,7 +155,7 @@
 #projp {
 	overflow:hidden;
 }
-//////////////////////////
+///////////////////////////////
 
 
 .projimg {

@@ -12,15 +12,6 @@
 @mayellow:     #FFF578;
 //@maliteyellow: #FFFDEA;
 
-/* unused fonts
-@font-face {
-  font-family: 'Almarai Reg';
-  src: url('../assets/Almarai/Almarai-Regular.ttf');
-}
-@font-face {
-  font-family: 'Almarai Lite';
-  src: url('../assets/Almarai/Almarai-Light.ttf');
-}*/
 @font-face {
   font-family: 'Tenor Sans';
   src: url('../assets/tenorsans.ttf');
@@ -50,6 +41,15 @@ h1, h2, h3, h4, h5 {
 	color: @onyx;
   font-family: 'Tenor Sans', sans-serif;
 }
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2.7em;
+}
 a, p {
 	color: @onyx;
   font-family: 'Graphik', sans-serif;
@@ -64,6 +64,19 @@ a:hover {
 }
 p {
   line-height: 2em;
+}
+
+// header shrink on mobile
+@media screen and (max-width: 675px) {
+	h1 {
+    font-size: 3.6em;
+  }
+  h2 {
+    font-size: 2.7em;
+  }
+  h3 {
+    font-size: 2.3em;
+  }
 }
 
 /*** color fade-in ***/
@@ -139,7 +152,6 @@ p {
   box-shadow: 0 0 10px #3a3a3a69; 
 }
 
-	
 
 
 /*** NAVBAR STUFF ***/
@@ -217,7 +229,7 @@ nav .fa-xmark {
 /************************/
 
 
-/** Responsive Navbar **/
+/********** Responsive Navbar ***********/
 /* When the screen is less than x pixels wide, hide all links, except for the first one ("Katherine Lim"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 680px) {
   nav .navicons, .pagelink {
@@ -277,8 +289,6 @@ main {
 	width:100%;
 }
 #mainhome {
-	width: 100%;
-	/*min-height: 850px;*/
   flex: 1;
 }
 
@@ -302,23 +312,50 @@ main {
   75% {opacity: 1; transform: scale(1.3);}
   to {opacity: 1; transform:scale(1.7);}
 }
+.fadefloatup { 
+  animation-name: fadefloatup;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  transition-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  margin-top: 20px;
+  opacity: 0;
+}
+@keyframes fadefloatup {
+  0% { transform: translate(0,  0px); }
+  100%   { transform: translate(0, -20px); opacity: 1;}   
+}
 
 .toptext {
 	animation: fadeSlideIn 1.5s;
 	transition-timing-function: ease-out;
-  //font-size: 3em;
-}/*
-@supports (-webkit-text-stroke: 1px black) {
-  .toptext {
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color: white;
-  }
+}
+.greetingtext p {
+	font-size: 1.2em;
+}
+
+/*********** SVG ***********/
+/*.star { position: relative; 
+margin: 1em;
+min-height:10em;}*/
+/*
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }*/
-.greeting p {
-	font-size: 1.3em;
+svg{
+  position: absolute;
+	//animation-delay: 2s;
+}
+
+.reactbutton {
+  vertical-align: middle;
+  width: 50px;
 }
 
 
+/********** FOOTER ************/
 .footer {
 	background: 
     color(@onyx);
@@ -369,24 +406,4 @@ main {
 }
 .footer i {
   line-height: 0 !important;
-}
-
-
-/*.star { position: relative; 
-margin: 1em;
-min-height:10em;}*/
-/*
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}*/
-svg{
-  position: absolute;
-	//animation-delay: 2s;
-}
-
-.reactbutton {
-  vertical-align: middle;
-  width: 50px;
 }
