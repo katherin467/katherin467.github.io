@@ -11,54 +11,32 @@
 @accentmuted: #e5dd80;
 
 .projecttop {
-    background: 
-        //linear-gradient(#253b7f, #253b7f2c)
-        //#fa7f0c7d)
-        //linear-gradient(90deg, #9ba6c5, rgb(255, 255, 255, 0.3) 40.71%)
-        //radial-gradient(circle at bottom, white, transparent 70%), 
-        //linear-gradient(rgba(255, 255, 255, 0.205),rgba(255, 255, 255, 0.205)),
-        
-        // half blue, half orange
-        
-        linear-gradient(45deg,  #253b7f, rgba(255, 255, 255, 0.1) 40.71%), 
-		linear-gradient(135deg, #253b7f, rgba(255, 255, 255, 0.1) 40.71%), 
-		linear-gradient(225deg, #fa7f0c, rgba(255, 255, 255, 0.1) 40.71%),
-		linear-gradient(315deg, #FA7E0C, rgba(255, 255, 255, 0.1) 40.71%);
-        
-        
-        // blue on top, orange on bottom
-        /*radial-gradient(ellipse at center, #fffffff1, transparent),
-        radial-gradient(ellipse at top, #253C7F, transparent),            
-        radial-gradient(ellipse at bottom, #FA7E0C, transparent);
-        */
-    ;
-    //background-color: #253C7F;
     text-align: center;
-    margin: 0em; 
-    padding: 3em;
+    padding-top: 3em;
+    line-height: 0;
 }
-
-.projecttext {
-    margin: 5em;    
-
+.topimg {
+    width: 100%;
+    bottom: auto;
 }
-
 .projectinfo {
-    display: grid;
-    grid-template-columns: 15em 15em 15em;
-    //grid-template-rows: 12em;
-    column-gap: 2em;
-    justify-items: stretch;
-    //align-items: center;
+    display: flex;
+    text-align: center;
     justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 .infobox {
     background-color: white;
-    padding: 1.5em;
+    border: 1.5px @onyx solid;
+    width: 15em;
+    padding: 1.3em;
+    margin: 1em;
 }
 .infobox h3 {
     margin: .5em;
     font-size: 1.5em;
+    font-weight: bold;
 }
 .infobox p {
     //line-height: 0em;
@@ -68,8 +46,16 @@
 }
 
 
-.project {
-    padding: 5em;
+
+.bigquestion {
+    text-align: center;
+    font-size: 24px;
+}
+.caption {
+	font-size: 15px;
+	font-style: italic;
+	color: rgb(110, 110, 110);
+	text-align: center;
 }
 .section h2 {
     font-size: 3em;
@@ -77,15 +63,24 @@
 .section h3 {
     font-size: 2em;
 }
+.section {
+    padding-inline: 12em;
+}
+
 
 // Responsive project margins
 @media screen and (max-width: 960px) {
-	main {
-		padding-inline: 8em;
+	.section {
+		padding-inline: 6em;
 	}
+    
 }
 @media screen and (max-width: 675px) {
-	main {
-		padding-inline: 1em;
+	.section {
+		padding-inline: 2em;
 	}
+    .projectinfo {
+        flex-direction: column;
+        align-items: center;
+    }
 }
