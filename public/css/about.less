@@ -17,38 +17,33 @@
 	padding-inline: 13em;
 	padding-top: 1em;
 	padding-bottom: 5em;
-}
 
-#bio {
-	display: grid;
-	grid-template-columns: 100%;
-	row-gap: 1.5em;
-}
-#bio div {
-	justify-self: center;
-}
-#biotext {
-	padding: 40px;	
-	background-color: #FFFFFF;
-}
-#biotext p{
-	margin-block-start: 0;
-	margin-block-end: 0;
-}
-#biotext a{
-	text-decoration: underline;
-}
+	#bio {
+		display: grid;
+		grid-template-columns: 100%;
+		row-gap: 1.5em;
 
-#pic {
-	animation-delay: 1.5s;
-	max-width: 380px;
-	max-height: 430px;	
-}
-#profilepic {
-  	object-fit: cover;
-	max-width: 100%;
-	height: auto;
-	width: auto;
+		div { justify-self: center; }
+		
+		#biotext {
+			padding: 40px;	
+			background-color: #FFFFFF;
+			p { margin-block-start: 0; margin-block-end: 0; }
+			a { text-decoration: underline; }
+		}
+
+		#pic {
+			animation-delay: 1.5s;
+			max-width: 380px;
+			max-height: 430px;	
+			#profilepic {
+				object-fit: cover;
+				max-width: 100%;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
 }
 
 // idk about this

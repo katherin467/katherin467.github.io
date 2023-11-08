@@ -15,57 +15,64 @@
     padding-top: 3em;
     line-height: 0;
     padding-inline: 2em;
+    .topimg {
+        width: 80%;
+        bottom: auto;
+    }
 }
-.topimg {
-    width: 80%;
-    bottom: auto;
-}
+
 .projectinfo {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 3em;
     margin-bottom: 3em;
-}
-.infobox {
-    background-color: white;
-    border: 1.5px @onyx solid;
-    width: 15em;
-    padding: 1.3em;
-    margin: 1em;
-}
-.infobox h3 {
-    margin: .5em;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.infobox p {
-    //line-height: 0em;
-    padding: 0;
-    margin: 0;
-    font-size: 0.9em;
-}
 
-
+    .infobox {
+        background-color: white;
+        border: 1.5px @onyx solid;
+        width: 15em;
+        padding: 1.3em;
+        margin: 1em;
+        h3 {
+            margin: .5em;
+            font-size: 1.5em;
+            //font-weight: bold;
+            font-family: 'Graphik Semibold Italic';
+        }
+        p {
+            //line-height: 0em;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9em;
+        }
+    }
+}
 
 .bigquestion {
     text-align: center;
-    font-size: 24px;
+    p {
+        font-size: 24px;
+        font-family: 'Graphik Italic';
+    }
 }
+
 .caption {
-	font-size: 15px;
-	font-style: italic;
+	font-size: 2em;
+	font-family: 'Graphik Italic';
 	color: rgb(110, 110, 110);
 	text-align: center;
 }
-.section h2 {
-    font-size: 3em;
-}
-.section h3 {
-    font-size: 2em;
-}
+
 .section {
     padding-inline: 15em;
+
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
 }
 
 

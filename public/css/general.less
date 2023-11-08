@@ -16,9 +16,81 @@
   font-family: 'Tenor Sans';
   src: url('../assets/tenorsans.ttf');
 }
+/* Graphik ...
+    Italic, Bold, Bold Italic,
+    Medium, Medium Italic,
+    Black, Black Italic, 
+    Semibold, Semibold Italic, 
+    Thin, Thin Italic,
+    Light, Light Italic,
+    Extralight, Extralight Italic
+*/
 @font-face {
   font-family: 'Graphik';
   src: url('../assets/Graphik-Font-Family/GraphikRegular.otf');
+}
+@font-face {
+  font-family: 'Graphik Black';
+  src: url('../assets/Graphik-Font-Family/GraphikBlack.otf')
+}
+@font-face {
+  font-family: 'Graphik Black Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikBlackItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Bold';
+  src: url('../assets/Graphik-Font-Family/GraphikBold.otf');
+}
+b {
+  font-family: 'Graphik Semibold';
+}
+@font-face {
+  font-family: 'Graphik Bold Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikBoldItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Extralight';
+  src: url('../assets/Graphik-Font-Family/GraphikExtralight.otf')
+}
+@font-face {
+  font-family: 'Graphik Extralight Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikExtralightItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Light';
+  src: url('../assets/Graphik-Font-Family/GraphikLight.otf')
+}
+@font-face {
+  font-family: 'Graphik Light Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikLightItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Medium';
+  src: url('../assets/Graphik-Font-Family/GraphikMedium.otf')
+}
+@font-face {
+  font-family: 'Graphik Medium Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikMediumItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikRegularItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Semibold';
+  src: url('../assets/Graphik-Font-Family/GraphikSemibold.otf')
+}
+@font-face {
+  font-family: 'Graphik Semibold Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikSemiboldItalic.otf')
+}
+@font-face {
+  font-family: 'Graphik Thin';
+  src: url('../assets/Graphik-Font-Family/GraphikThin.otf')
+}
+@font-face {
+  font-family: 'Graphik Thin Italic';
+  src: url('../assets/Graphik-Font-Family/GraphikThinItalic.otf')
 }
 
 html {
@@ -50,19 +122,23 @@ h2 {
 h3 {
   font-size: 2.7em;
 }
-a, p {
+a {
 	color: @onyx;
   font-family: 'Graphik', sans-serif;
-}
-a:link, a:visited {
-	color: @onyx;
-	//text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-a:hover {
-  color: @mapurple;
+  
+  &:link, &:visited {
+    color: @onyx;
+    //text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  &:hover {
+    color: @mapurple;
+  }
 }
 p {
+  color: @onyx;
+  font-family: 'Graphik', sans-serif;
   line-height: 2em;
 }
 
@@ -82,9 +158,9 @@ p {
 /*** color fade-in ***/
 .fadeinpurple {
   transition: color 0.3s ease-in-out;
-}
-.fadeinpurple:hover {
-  color: @mapurple;
+  &:hover {
+    color: @mapurple;
+  }
 }
 /*** sliding underline ***/ 
 .purpleline {
@@ -138,23 +214,21 @@ p {
 /*** grow/shrink hover ***/
 .grow {
 	transition: all .1s ease-in-out;
-}
-.grow:hover {
-	transform: scale(1.02);
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 .icongrow {
 	transition: all .2s ease-in-out; 
-}
-.icongrow:hover { 
-	transform: scale(.88); 
+  &:hover {
+    transform: scale(.88); 
+  }
 }
 .someshadow {
   box-shadow: 0 0 10px #3a3a3a69; 
 }
 
 
-
-/*** NAVBAR STUFF ***/
 nav {
 	position: fixed;
   display: flex;
@@ -169,117 +243,122 @@ nav {
   height: auto !important;
   box-shadow: none !important;
   line-height: 0 !important;
-}
-nav a:link, nav a:visited {
-	color: @onyx;
-	text-decoration: none;
-}
-.pagelinks {
-  margin-left: 3.125em;
-}
-.navelem {
-  vertical-align: middle;
-	font-size: 1.3em;
-}
-#logo.navelem {
-  font-size: 0;
-  margin-left: 3.125em;
-}
-nav .pagelink{
-  padding: 10px;
-	margin-inline-start: 3.125em;  
-  & {
-    background-image: linear-gradient(@mapurple, @mapurple);
-    background-size: 0% 0.1em;
-    background-position-y: 100%;
-    background-position-x: 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s ease-in-out;
-    }
-  &:hover,
-  &:focus,
-  &:active {
-    background-size: 100% 0.1em;
-    background-position-x: 0%;
+
+  a:link, a:visited {
+    color: @onyx;
+    text-decoration: none;
   }
-}
-.navicons {
-  align-items: flex-end;
-  margin-right: 0;
-  display: inline;
-}
-.navicon {
-	margin-inline-end: 2em;
-}
-nav i {
-  line-height: 0 !important;
-  height: 0 !important;
-  font-size: 1.2em;
-}
-/**** hidden for now ****/
-nav #hamburg {
-  display: none;
-}
-nav .hamicon {
-  display: none;
-}
-nav .fa-xmark {
-  display: none;
-}
-/************************/
+  
+  i {
+    line-height: 0 !important;
+    height: 0 !important;
+    font-size: 1.2em;
+  }
 
+  .pagelinks {
+    margin-left: 3.125em;
+  }
+  .pagelink{
+    padding: 10px;
+    margin-inline-start: 3.125em;  
+    & {
+      background-image: linear-gradient(@mapurple, @mapurple);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.3s ease-in-out;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-size: 100% 0.1em;
+      background-position-x: 0%;
+    }
+  }
 
-/********** Responsive Navbar ***********/
-/* When the screen is less than x pixels wide, hide all links, except for the first one ("Katherine Lim"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 680px) {
-  nav .navicons, .pagelink {
+  .navelem {
+    vertical-align: middle;
+    font-size: 1.3em;
+  }
+  #logo.navelem {
+    font-size: 0;
+    margin-left: 3.125em;
+  }
+
+  .navicons {
+    align-items: flex-end;
+    margin-right: 0;
+    display: inline;
+  }
+  .navicon {
+    margin-inline-end: 2em;
+  }
+
+  /**** hidden for now ****/
+  #hamburg {
     display: none;
   }
-  nav #hamburg {
-    display: inline;
-    margin-right: 2em;
-    justify-content: center;
-    //line-height:1 !important;
+  .hamicon {
+    display: none;
   }
-  .pagelinks {
-    margin: auto;
-    padding-left: 2.5em;
+  .fa-xmark {
+    display: none;
   }
-  .pagelink, .navicons {
-    overflow: hidden;
+  /************************/
+}
+
+/********** Responsive Navbar ***********/
+@media screen and (max-width: 680px) {
+  nav {
+    .navicons, .pagelink {
+      display: none;
+      overflow: hidden;
+    }
+    #hamburg {
+      display: inline;
+      margin-right: 2em;
+      justify-content: center;
+      //line-height:1 !important;
+    }
+    .pagelinks {
+      margin: auto;
+      padding-left: 2.5em;
+    }
   }
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   nav.responsive {
     position: fixed; 
     align-items: baseline;
-  }
-  nav.responsive .fa-xmark {
-    display: flex;
-    padding-top: 2.2em;
-  }
-  nav.responsive .fa-bars {
-    display: none;
-  }
-  nav.responsive .pagelinks a {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: center;
-  }
-  nav.responsive .pagelink {
-    padding-top: 1.5em;
-    padding-bottom: 1.1em;
-  }
-  nav.responsive .hamicons {
-    display: flex;
-    flex-direction:row;
-    padding-top: 2.8em; // how much is too much?
-    padding-bottom: 1.4em;
-  }
-  nav.responsive .hamicon {
-    font-size: 1.4em;
-    padding-inline: 1em;
+
+    .fa-xmark {
+      display: flex;
+      padding-top: 2.2em;
+    }
+    .fa-bars {
+      display: none;
+    }
+    .pagelinks a {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      text-align: center;
+    }
+    .pagelink {
+      padding-top: 1.5em;
+      padding-bottom: 1.1em;
+    }
+    .hamicons {
+      display: flex;
+      flex-direction:row;
+      padding-top: 2.8em; // how much is too much?
+      padding-bottom: 1.4em;
+    }
+    .hamicon {
+      font-size: 1.4em;
+      padding-inline: 1em;
+    }
   }
 }
 
@@ -355,55 +434,59 @@ svg{
 }
 
 
-/********** FOOTER ************/
 .footer {
-	background: 
-    color(@onyx);
+	background: color(@onyx);
   flex-shrink: 0;
   text-align: center;
-  //padding: 1em;
-}
-#footerconnect {
-  padding: 4em;
-  //margin: 1em;
-}
-#footerlinks {
-  margin-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.15; 
-}
-.footer a {
-  background-color: white;
-  padding: 1em; 
-  text-decoration: none;
-  margin-inline: 1em;
-  margin-top: 1em;
-  font-weight:bold;
-  vertical-align: middle;
-  //align-items: center;
-}
-#footerbottom {
-  padding: 2em;
-  background:color(@onyx)
-  //border-top: 3px solid @mapurple;
-}
-#footerbottom p {
-  color: white;
-}
-.footer h3, .footer p {
-  color:white;
-  margin: 0;
-}
-// centering the linkedin icon
-#linkedin a{
-  text-align: center;
-}
-#linkedin i {
-  display: inline-block;
-  text-align: center;
-}
-.footer i {
-  line-height: 0 !important;
+  
+  a {
+    background-color: white;
+    padding: 1em; 
+    text-decoration: none;
+    margin-inline: 1em;
+    margin-top: 1em;
+    font-family: 'Graphik Semibold';
+    vertical-align: middle;
+  }
+
+  h3, p {
+    color:white;
+    margin: 0;
+  }
+
+  i {
+    line-height: 0 !important;
+  }
+
+  #footerconnect {
+    padding: 4em;
+
+    #footerlinks {
+      margin-top: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      line-height: 1.15; 
+      // centering the linkedin icon
+      #linkedin {
+        a {
+          text-align: center;
+        }
+        i {
+          display: inline-block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  #footerbottom {
+    padding: 2em;
+    background:color(@onyx);
+    //border-top: 3px solid @mapurple;
+    p {
+      color: white;
+      font-family: 'Graphik Extralight Italic';
+    }
+  }
 }

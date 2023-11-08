@@ -56,6 +56,43 @@
 	//width: 100%;
 	//background-size: 400% 400%;
 	//min-height: 70vh;
+	
+	padding-inline: 17em;
+	padding-top: 7em;
+	padding-bottom: 6em;
+	//overflow: hidden;
+	display: flex;
+	
+	.greetingtext {
+		position: relative;
+	}
+	#description a {
+		text-decoration:underline;
+	}
+	#topsvg {
+		//margin-left: 30em;
+		margin-left: -5em;
+		margin-top: 0em;  
+
+		transform: scale(1);
+		transform-box: fill-box;
+		transform-origin: center;
+		transition-timing-function: ease-out;
+		opacity: 0;
+		animation: fadeBounceIn .6s linear 2s forwards;
+	}
+	#topsvg2 {
+		right: 10%;
+		display: inline-block;
+		align-self: flex-end;
+
+		transform: scale(1);
+		transform-box: fill-box;
+		transform-origin: center;
+		transition-timing-function: ease-out;
+		opacity: 0;
+		animation: fadeBounceIn .6s linear 2.2s forwards;
+	}
 }
 
 // color cycle
@@ -82,61 +119,34 @@
 	//75% { opacity:0;}//background-color: @pink; }
 }*/
 
-.greeting {
-	padding-inline: 17em;
-	padding-top: 7em;
-	padding-bottom: 6em;
-	//overflow: hidden;
-	display: flex;
-}
-.greetingtext {
-	position: relative;
-}
 
 
-#description a {
-	text-decoration:underline;
-}
-.topsvg {
-	//margin-left: 30em;
-	margin-left: -5em;
-	margin-top: 0em;  
-
-	transform: scale(1);
-	transform-box: fill-box;
-	transform-origin: center;
-	transition-timing-function: ease-out;
-	opacity: 0;
-	animation: fadeBounceIn .6s linear 2s forwards;
-}
-.topsvg2 {
-	right: 10%;
-	display: inline-block;
-	align-self: flex-end;
-
-	transform: scale(1);
-	transform-box: fill-box;
-	transform-origin: center;
-	transition-timing-function: ease-out;
-	opacity: 0;
-	animation: fadeBounceIn .6s linear 2.2s forwards;
-}
 
 #projectdiv {
 	padding-inline: 17em;
 	padding-top: 4em;
 	padding-bottom: 4em;
 	//max-width: 90%;
+
+	#previews {
+		display: grid; 
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fill, 100%);
+		//grid-template-rows: 50em;
+
+		a {
+			margin-top: 2em;
+		}
+		.projimg {
+			width: 100%;
+			max-width: 60em;
+		}
+	}
 }
 
-#previews {
-	display: grid; 
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-	grid-template-columns: repeat(auto-fill, 100%);
-    //grid-template-rows: 50em;
-}
+
 
 ///// not really used atm /////
 .project {
@@ -158,14 +168,6 @@
 }
 ///////////////////////////////
 
-
-.projimg {
-	width: 100%;
-	max-width: 60em;
-}
-#previews a {
-	margin-top: 2em;
-}
 
 // Responsive homepage
 @media screen and (max-width: 960px) {
