@@ -35,6 +35,7 @@ app.get('/easyaccess', function(req, res) {
     res.sendFile(__dirname + '/easyaccess.html')
 });
 
+
 app.listen(app.get('port'), () => {
     console.log("Express server listening on port " + app.get('port'));
 });
