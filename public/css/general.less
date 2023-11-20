@@ -311,7 +311,7 @@ nav {
 }
 
 /********** Responsive Navbar ***********/
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 716px) {
   nav {
     .navicons, .pagelink {
       display: none;
@@ -341,15 +341,26 @@ nav {
     .fa-bars {
       display: none;
     }
+    .pagelinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #logo.navelem {
+      margin: auto;
+    }
     .pagelinks a {
       display: flex;
       flex-direction: column;
       margin: auto;
       text-align: center;
+      justify-self: center;
     }
     .pagelink {
       padding-top: 1.5em;
       padding-bottom: 1.1em;
+      justify-self: center;
     }
     .hamicons {
       display: flex;
