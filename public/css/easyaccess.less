@@ -1,5 +1,7 @@
 @navy: #253C7F;
+@lightnavy: #dbe4ff;
 @skyblue: #ABE2F4;
+@lightorange: #ffc895;
 @orange: #FA7E0C;
 @yellow: #FFEC77;
 @pink: #FFDCDC;
@@ -29,6 +31,70 @@
     background-color: @skyblue;
 }
 
-.bigquestion {
-    background-color: @yellow;
+/*
+.subsection h3 {
+    //color:white;
+    //text-shadow: -1px -1px 0 @navy, 1px -1px 0 @navy, -1px 1px 0 @navy, 1px 1px 0 @navy;
+}
+*/
+
+#bigquestion {
+    background-color: @skyblue;
+}
+
+.bgcolored {
+    background-color: @skyblue;
+}
+
+#set {
+    min-width: 53.5em;
+    max-height: 35.5em;
+    //border: 1.4px solid @navy;
+    table-layout: fixed;
+
+    tr {
+        border-bottom: none;
+    }
+    th {
+        text-align:center;
+        color: white;
+        font-family: 'Graphik SemiBold';
+        background-color: @navy;
+    }
+    td{
+        padding: 0 10px;
+        height: auto;
+        background-color: white;
+    }
+    
+    ul{
+        padding-left: 0;
+        margin-left: 0;
+    }
+    li {
+        padding: 3px 0;
+        line-height: 1.5em;
+    }
+}
+#compet {
+    //min-width: 35em;
+    //max-width:100%;
+    //min-height: 35em;
+    max-width: 100%;
+    min-width: 55em;
+    height:auto;
+}
+#competdiv {
+    //width: 100%;
+    //min-height: 35.5em;
+    overflow: auto;
+  
+    max-width: 100%;  // or width instead of max-width
+    max-height: 600px; // or height instead of max-height
+ 
+}
+
+#finalsolutionbtn {
+    background-color: @orange;
+    color: white;
 }

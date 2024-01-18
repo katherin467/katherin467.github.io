@@ -29,10 +29,10 @@
 	
 	<body>
 		<!-- NAVBAR -->
-     	<nav class="navbar" id="myTopnav">					
+     	<nav class="navbar" id="myTopnav">
 			<span class="pagelinks">
 				<a class="navelem" id="logo" href="/" onclick="closeHamburg()">
-					<img src="./public/assets/personallogo.png" width="80" style="margin:auto;">
+					<img src="./public/assets/personallogo.png" alt="A logo of the letters K and L" width="80" style="margin:auto;">
 				</a>
 				<!--<a class="navelem pagelink purpleline" id="navhome"  href="/">Home</a>-->
 				<a class="navelem pagelink purpleline" id="navwork"   href="/#projectslink" onclick="closeHamburg()">Work</a>
@@ -72,7 +72,7 @@
 					<h1>EasyAccess</h1>
                     <p>A startup dedicated to making accessible businesses easier to discover</p>
 				</div>
-				<img class="topimg" src="/public/assets/easyaccess/easyaccesstopalt.png">
+				<img class="topimg" alt="screen mockups for easy access mobile app" src="/public/assets/easyaccess/easyaccesstopalt.png">
      		</div>
 			<div class="projectinfo">
 				<div class="infobox">
@@ -92,106 +92,218 @@
 
             <div class="project">
                 
-				<div class="section bigquestion">
-					<p>"How might we help physically disabled individuals find accessible places more efficiently and reliably?"</p>
+				<div class="section emphasis" id="bigquestion">
+					<p>💭 "How might we help physically disabled individuals find accessible places more efficiently and reliably?"</p>
 				</div>
 
-				<div class="disclaimer" style="font-size: 20px; text-align: center; padding-top: 5em; padding-bottom: 5em; ">
-					<p>🔨 This page is currently under construction, stay tuned!</p>
-				</div>
-
-				<!--
 				<div class="section">
 					<h2>Background</h2>
-					<p>...</p>
+					<p><a href="https://www.who.int/health-topics/disability#tab=tab_1" target="_blank">According to the World Health Organization</a>, an estimated 1.3 billion people - 
+						about 16% of the global population - currently experience significant disability, a number that is increasing as time goes on. As such, 
+						it's incredibly important to implement accessible services in both physical and digital contexts so that more people can receive equal treatment
+						regardless of whether they have a disability or not. 
+					</p>
+					<p>However, although many countries, workplaces, and common spaces have put measures in place to assist disabled people and remove barriers they would otherwise
+						face, accessibility is not widely supported everywhere and this lack of support remains a major obstacle to the daily lives of individuals with disabilities.
+					</p>
+
 					<div class="subsection">
 						<h3>The Challenge</h3>
-						<p>...</p>
+						<p>For UCSD's Startup Studio, our team was challenged to investigate a specific problem within the broad field of accessibility,
+							 and design an innovative service addressing it. This included coming up with a prototype as well as writing a business plan.</p>
 					</div>
 					<div class="subsection">
 						<h3>Our Solution</h3>
-						<p>...</p>
+						<p>In the end, we created EasyAccess, a mobile app that allows users to explore and share up-to-date information about the 
+							accessibility features and accommodations offered by businesses. 
+						</p>
 					</div>
 					<div class="subsection">
 						<h3>My Role</h3>
 						<p>Over the course of this project, I contributed to all stages of the process, from initial ideation to the final design. 
 						   I was especially involved in conducting user interviews as well as constructing the final interactive prototype. 
-						   As a UI/UX Designer, I collaborated with the rest of my team to complete our milestones and keep our target users in mind for the entire duration of the project. 
+						   As a UI/UX Researcher and Designer, I collaborated with my team to complete our milestones and keep our target users in mind for the entire duration of the project. 
 						</p>
-						<a>Jump to final solution</a>
+						<div class="button">
+							<a class="grow someshadow" id="finalsolutionbtn" href="#finalsolution">
+								<i class="fa-solid fa-arrow-down"></i>
+								Jump to final prototype
+							</a>
+						</div>
 					</div>
 				</div>
 
-				<div class="section">
-					<h2>Discovery: Understanding the Problem Space</h2>
+				<!--keep?<hr>-->
+				
+				<div class="section bgcolored">
+					<h2>Discovery</h2>
 
 					<div class="subsection">
 						<h3>SET Analysis</h3>
-						<p>...</p>
-						
-						<p>Based on these factors (social, economic, technology), we came up with several Product Opportunity Gaps:</p>
+						<p>To start, our team began examining the problem space and searching for a specific issue to focus on through a broad SET 
+							(social, economic, technological) analysis. By doing so, we could gain 
+							a better overall grasp of current accessibility services/trends and look for potential areas of improvement.</p>
+						<div style="overflow-x:auto">
+							<table id="set">
+								<tr>
+									<th>Social</th>
+									<th>Economic</th>
+									<th>Technological</th>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>Gradual reduced stigmatization against mental illnesses & disabilities</li>
+											<li>Increased digital accessibility due to pandemic as many services are online/virtual</li>
+											<li>Awareness and promotion for mental health, inclusion, diversity</li>
+											<li>Emphasis on ability-based design</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>$490 billion disposable income for working-age people with disabilities</li>
+											<li>Rising costs of prescription medicine</li>
+											<li>Remote jobs allowing for opportunities regardless of location or general abilities</li>
+											<li>Reliance on insurance companies to help afford technology that helps with accessibility issues</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li>Automation of objects</li>
+											<li>Keyboard accessibility for people who are blind, have motor disabilities, tremors, little use of hands/no hands</li>
+											<li>Digital assistance (i.e. screen-readers, text-to-speech, voice recognition software)</li>
+											<li>Bluetooth or wireless connection between devices</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<br>
+						<p class="listp">Based on these factors, we came up with several Product Opportunity Gaps:</p>
 						<ul>
-							<li></li>
+							<li>Help individuals find more accessible public spaces</li>
+							<li>Promote awareness and resources for accessibility</li>
+							<li>Aid local businesses with ADA compliance</li>
+							<li><b>Business side:</b> help businesses learn how to improve accommodations</li>
+							<li><b>Customer side:</b> a service that provides accurate and verifiable information about accessibility</li>
 						</ul>
 					</div>
 					<div class="subsection">
 						<h3>Launching our Survey</h3>
-						<p>...</p>
+						<p>Having narrowed down our focus a little more, we then began looking for input and insights from 
+							people facing accessibility-related issues to better understand the sorts of challenges they frequently 
+							face in real life.
+						</p>
+						<p class="listp">We created an online survey and found that:</p>
+						<ul>
+							<li>85% of participants have faced or know someone who has faced accessibility issues
+								<img style="align-self:center;" src="public/assets/easyaccess/surveyimg1.png"/>
+							</li>
+							<li>School, work, and transportation are the top places where people experience accessibility issues
+								<img style="align-self:center;" src="public/assets/easyaccess/surveyimg.png"/></li>
+
+						</ul>
+						<p class="listp">When asked what they wished the general public knew, participants said: </p>
+						<ul>
+							<li>People with disabilities are people too, who can still do things (not incapable)</li>
+							<li>Awareness of accessibility options for those that need it</li>
+						</ul>
 					</div>
 					<div class="subsection">
 						<h3>Competitive Analysis</h3>
-						<p>...</p>
+						<p>To get a better idea of what kinds of services are already provided in the field of accessibility, we conducted a 
+							competitive analysis on some notable applications within our target focus area. 
+						</p>
+						<div id="competdiv">
+							<img id="compet" alt="table listing other accessibility-related services" src="/public/assets/easyaccess/competitiveanalysis.png"/>
+						</div>
+						<p class="listp">From this analysis, we noticed a couple of recurring problems that could be improved:</p>
+						<ul>
+							<li>Lack of in-depth accessibility options</li>
+							<li>Inability to report inaccuracies/edit reviews</li>
+						</ul>
 					</div>
-					<div class="subsection">
+					<div class="subsection" >
 						<h3>Mission Statement</h3>
-						<h5>...</h5>
+						<div class="emphasis">
+							<p> 💡 We aim to provide people who have accessibility issues with the necessary 
+							information to live daily life more comfortably.</p>
+						</div>
 					</div>
 				</div>
 
+				<div class="disclaimer" style="font-size: 20px; text-align: center; padding-top: 5em; padding-bottom: 5em; ">
+					<hr>
+					<p>🔨 This page is currently under construction, stay tuned!</p>
+					<hr>
+				</div>
+				<!--
 				<div class="section">
 					<h2>Validating User Scenarios</h2>
 
 					<div class="subsection">
 						<h3>User Interviews: Getting to know our stakeholders</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 					<div class="subsection">
 						<h3>Value Flow Diagrams</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 					<div class="subsection">
 						<h3>So... Who are we? / Narrowing it Down / Finding our Angle</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 				</div>
 
 				<div class="section">
 					<h2>Design and Marketing</h2>
-					<p>...</p>
+					<p> TODO </p>
 					<div class="subsection">
 						<h3>Brand Identity</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 					<div class="subsection">
 						<h3>Web Probe</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 					<div class="subsection">
 						<h3>Concierge MVP: Concept Evaluation</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 				</div>
 
 				<div class="section">
 					<h2>Pitching Our Innovation</h2>
-					<p>...</p>
+					<p>For the last steps of this project, our time created the Hi-Fi prototype for EasyAccess as well as a 
+						<a href="https://www.kickstarter.com/projects/easyaccess/1417953831?token=d4c66881">crowdfunding campaign</a>
+						through Kickstarter. 
+					</p>
 					<div class="subsection">
 						<h3>Video Pitch: Our Story</h3>
-						<p>...</p>
+						<p>As part of our campaign, we created a concise crowdfunding video to present our app and appeal to potential stakeholders.</p>
+						<iframe src="https://drive.google.com/file/d/1pvNijPpXjzcehOZ1nCT9Ou5I28wYCWnF/preview" width="640" height="480" allow="autoplay"></iframe>
 					</div>
-					<div class="subsection">
+					<div class="subsection" id="finalsolution">
 						<h3>Hi-Fi Prototype: Home</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
+
+						<a class="button #finalsolutionbtn" href="https://www.figma.com/proto/jXV61Eb6nVovClvoQKC4si/Prototypes?page-id=172%3A736&node-id=172-1375&viewport=254%2C205%2C0.09&scaling=scale-down&starting-point-node-id=172%3A1375&mode=design&t=eFFgpskX1agH0rxO-1" target="_blank">
+							Interactive Prototype on Figma
+						</a>
 					</div>
 				</div>
 
@@ -199,11 +311,19 @@
 					<h2>Final Thoughts</h2>
 					<div class="subsection">
 						<h3>Next Steps</h3>
-						<p>...</p>
+						<p>If we had the time to further develop EasyAccess, there are plenty of things we would like to do: </p>
+						<ul>
+							<li><b>Revise and update our budget and growth model</b> using revenue from our Kickstarter pledges</li>
+							<li><b>Initiate alpha and beta tests</b> on our current Hi-Fi prototype to receive feedback and refine it</li>
+							<li><b>Conduct additional in-depth market research</b> on common accessibility options that people look for within businesses/public institutions</li>
+							<li><b>Work with business owners</b> to find additional ways to support their business through our app</li>
+						</ul>
 					</div>
 					<div class="subsection">
 						<h3>Reflection</h3>
-						<p>...</p>
+						<p>
+							TODO
+						</p>
 					</div>
 				</div>
 				-->

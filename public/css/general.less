@@ -125,21 +125,26 @@ h3 {
 a {
 	color: @onyx;
   font-family: 'Graphik', sans-serif;
-  
+  text-decoration: underline;
   &:link, &:visited {
     color: @onyx;
     //text-decoration: none;
-    transition: color 0.3s ease-in-out;
   }
   
+  transition: color 0.3s ease-in-out;  
   &:hover {
     color: @mapurple;
   }
 }
-p {
+p, li {
   color: @onyx;
   font-family: 'Graphik', sans-serif;
   line-height: 2em;
+}
+ul:not(.browser-default) > li{
+  list-style-type: disc !important;
+  padding-left: 10px;
+  margin-left: 20px;
 }
 
 // header shrink on mobile
@@ -342,10 +347,7 @@ nav {
       display: none;
     }
     .pagelinks {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
     #logo.navelem {
       margin: auto;
