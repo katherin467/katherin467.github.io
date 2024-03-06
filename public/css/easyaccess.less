@@ -108,16 +108,61 @@
     margin: auto;
     display:flex;
     flex-direction:row;
-    border: 2px solid @lightorange;
+    border: 2px solid @orange;
+    background-color: white;
     margin-top: 1em;
     margin-bottom: 1em;
     p {
         font-family: 'Graphik Italic'
     }
 }
-
+#brandimgs {
+    display:flex; 
+    flex-direction: row; 
+    align-items:center; 
+    
+}
 #logo {
     width: 40%;
+}
+#landingpages {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+    
+    //flex-wrap:wrap;
+    .landingpage {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-bottom: 18px;
+    }
+    img {
+        max-width: 20em;
+        border: @navy 5px solid;
+    }
+    p {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom:0;
+    }
+}
+.imgwcaption {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom: 18px;
+    
+    img {
+        max-width: 30em;
+        //border: @navy 5px solid;
+    }
+    p {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom:0;
+    }
 }
 
 .bigquote {
@@ -129,4 +174,17 @@
 #finalsolutionbtn {
     background-color: @orange;
     color: white;
+}
+
+@media screen and (max-width: 675px) {
+	#brandimgs {
+        flex-direction:column;
+        img{
+            padding-bottom: 8px;
+        }
+    }
+    #landingpages {
+        flex-direction:column;
+        align-items:center;
+    }
 }
