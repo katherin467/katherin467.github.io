@@ -117,6 +117,59 @@
     }
 }
 
+.hifiscreen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    img {
+        width: 30%;
+        margin: 0;
+    }
+    ul {
+        padding-top:1em;
+        padding-bottom:1em;
+    }
+}
+
+.iframediv {
+    //position: relative;
+    overflow: hidden;
+    
+    //width: 100%;
+    //padding-top: 57%; /* aspect ratio */
+    //max-width: 40em;
+    //max-height: 10em;
+    //min-width: 20em;
+    min-height: 15em;
+
+    text-align:center;
+    
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    iframe {
+        //display:block;
+        //align-self: center;
+        //justify-self:center;
+        //text-align:center;
+        //margin:auto;
+        
+        /*position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;*/
+        width: 50%;
+        min-width: 20em;
+        height: 100%;
+        min-height: 15em;
+    }
+}
+
 hr {
     width:50%;
     height:2px;
@@ -162,5 +215,8 @@ hr {
         flex-direction: column;
         align-items: center;
     }
-    
+    .hifiscreen {
+        flex-direction:column;
+        img {width:50%;}
+    }
 }
