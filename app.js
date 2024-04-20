@@ -34,6 +34,9 @@ app.get('/insight', function(req, res) {
 app.get('/easyaccess', function(req, res) {
     res.sendFile(__dirname + '/easyaccess.html')
 });
+app.get('/packetcraft', function(req, res) {
+    res.sendFile(__dirname + '/packetcraft.html')
+});
 
 
 app.listen(app.get('port'), () => {

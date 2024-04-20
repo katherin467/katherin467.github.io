@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" id="page-top">
+    <head>
+        <title>✨ Katherine Lim - Packetcraft</title>
+		<link rel="icon" href="./public/assets/personallogo.png">
+
+        <meta charset="UTF-8" >
+        <meta name="description" content="My website">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="public/css/materialize.min.css"  media="screen">
+		
+		<link href="public/css/general.less" rel="stylesheet/less">
+		<link href="public/css/project.less" rel="stylesheet/less">
+		<link href="public/css/packetcraft.less" rel="stylesheet/less">
+		
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<script src="https://kit.fontawesome.com/341afe5983.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+        <script src="public/js/project.js"></script>
+    </head>
+	
+	<body>
+		<!------------------- NAVBAR -------------------->
+     	<nav class="navbar" id="myTopnav">					
+			<span class="pagelinks">
+				<a class="navelem" id="logo" href="/" onclick="closeHamburg()">
+					<img src="./public/assets/personallogo.png" alt="A logo of the letters K and L" width="80" style="margin:auto;">
+				</a>
+				<!--<a class="navelem pagelink purpleline" id="navhome"  href="/">Home</a>-->
+				<a class="navelem pagelink purpleline" id="navwork"   href="/#projectslink" onclick="closeHamburg()">Work</a>
+				<a class="navelem pagelink purpleline" id="navabout"  href="about">About</a>
+				<a class="navelem pagelink purpleline" id="navresume" href="https://drive.google.com/file/d/14fUOYaPj11W4F__-HGtyy3yDL96ma3ka/view?usp=sharing" target="_blank">Resume</a>
+				
+				<!-- HIDDEN when not hamburg -->
+				<span class="hamicons">
+					<a class="navicon fadeinpurple hamicon" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a class="navicon fadeinpurple hamicon" href="mailto:katherinelim467@gmail.com">
+						<i class="far fa-envelope"></i>
+					</a>
+				</span>
+				
+			</span>
+
+			<span class="navicons">
+				<a class="navicon navelem fadeinpurple" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+				<a class="navicon navelem fadeinpurple" href="mailto:katherinelim467@gmail.com">
+					<i class="far fa-envelope"></i>
+				</a>
+			</span>
+				
+			<a href="javascript:void(0);" class="fadeinpurple" id="hamburg" onclick="expandHamburg()">
+    			<i class="fa fa-bars"></i>
+				<i class="fa-solid fa-xmark fa-lg"></i>
+  			</a>
+		</nav>
+
+
+		<main id="mainhome">
+			<div class="projecttop">
+				<div class="projecttext">
+					<h1>Packetcraft</h1>
+					<h3>Bluetooth Microphone Software Prototype</h3>
+                    <p>A project demonstrating Packetcraft's software for leading-edge Bluetooth microphones and receivers</p>
+					<p><i>Copyright © 2022 Packetcraft, Inc. Uploaded with permission.</i></p>
+					<!--insert image-->
+				</div>
+     		</div>
+			<div class="projectinfo">
+				<div class="infobox">
+					<h3>Duration</h3>
+					<p>2 months</p>
+					<p>Aug - Oct 2022</p>
+				</div>
+				<div class="infobox">
+					<h3>Role</h3>
+					<p>Associate UI/UX Engineer</p>
+				</div>
+				<div class="infobox">
+					<h3>Tools</h3>
+					<p>Microsoft Word</p>
+					<p>Adobe XD</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="disclaimer" style="font-size: 20px; text-align: center; padding-top: 5em; padding-bottom: 5em; ">
+					<hr>
+						<p>🔨 This page is currently under construction, stay tuned!</p>
+					<hr>
+				</div>
+			</div>
+		</main>
+
+    	<footer class="footer">  
+			<div id="footerconnect">
+				<h3>Let's connect!</h3>
+				<div id="footerlinks">
+					<a class="fadeinpurple" href="https://drive.google.com/file/d/14fUOYaPj11W4F__-HGtyy3yDL96ma3ka/view?usp=sharing" target="_blank" >Resume</a>
+					<a class="fadeinpurple" id="linkedin" href="https://www.linkedin.com/in/katherinealim/" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a class="fadeinpurple" href="mailto:katherinelim467@gmail.com">
+						<i class="far fa-envelope"></i>
+					</a>
+				</div>
+			</div>
+			<div id="footerbottom">
+				<p> ©2024 Created by Katherine Lim, with plenty of 💜 and ☕</p>
+			</div>
+    	</footer>
+		
+	</body>
+</html>
