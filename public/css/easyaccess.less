@@ -1,6 +1,7 @@
 @navy: #253C7F;
 @lightnavy: #dbe4ff;
 @skyblue: #ABE2F4;
+@lightskyblue: #d9f6ff;
 @lightorange: #ffc895;
 @orange: #FA7E0C;
 @yellow: #FFEC77;
@@ -28,7 +29,7 @@
         radial-gradient(ellipse at bottom, #FA7E0C, transparent);
         */
     //;
-    background-color: @skyblue;
+    background-color: @lightskyblue;
 }
 
 /*
@@ -39,11 +40,11 @@
 */
 
 #bigquestion {
-    background-color: @skyblue;
+    background-color: @lightskyblue;
 }
 
 .bgcolored {
-    background-color: @skyblue;
+    background-color: @lightskyblue;
 }
 
 #set {
@@ -53,18 +54,20 @@
     table-layout: fixed;
 
     tr {
-        border-bottom: none;
+        border-bottom:1px solid #7a7a7a;
     }
     th {
         text-align:center;
         color: white;
         font-family: 'Graphik SemiBold';
         background-color: @navy;
+        border: 1px solid #7a7a7a;
     }
     td{
         padding: 0 10px;
         height: auto;
         background-color: white;
+        border: 1px solid #7a7a7a;
     }
     
     ul{
