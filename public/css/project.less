@@ -15,7 +15,22 @@
     padding-top: 3em;
     line-height: 0;
     padding-inline: 2em;
+    .projecttext {
+        display: block;
+        background-color: rgba(255, 255, 255);
+        padding-bottom: 1em;
+        padding-top: 0.3em;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: fit-content;
+        margin: auto;
+        //box-shadow: 5px 5px #1e1e1e, -5px -5px #1e1e1e;
+        border: 0.4em outset #919191;
+        //box-shadow: #1e1e1e4c 0 0 10px 0;
+        //border-radius: 2em;
+    }
     .topimg {
+        margin-top: 1em;
         width: 80%;
         bottom: auto;
     }
@@ -58,6 +73,11 @@
         font-family: 'Graphik Italic';
         padding-bottom:0 !important;
     }
+}
+
+.copyright {
+    font-family: 'Graphik Light Italic';
+    text-align: center;
 }
 
 .caption {
@@ -108,8 +128,8 @@
     }
 }
 .subsection {
-    margin-top: 3em;
-    margin-bottom: 4em;
+    padding-top: 0em;
+    padding-bottom: 3em;
     h3 {
         font-size: 2em;
         margin-bottom: 0;
@@ -132,6 +152,23 @@
     ul {
         padding-top:1em;
         padding-bottom:1em;
+    }
+}
+
+.lofigallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    flex-wrap: wrap;
+
+    img {
+        width: 30%;
+        min-width: 15em;
+        margin: 0;
+        padding: 1em;
     }
 }
 
@@ -203,7 +240,11 @@ hr {
 	}
 }
 @media screen and (max-width: 675px) {
-	.topimg {
+	.projecttop .projecttext {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .topimg {
         width: 100%;
     }
     .section {
