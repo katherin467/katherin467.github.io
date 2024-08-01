@@ -10,10 +10,18 @@
 	color: @mapurple;
 }
 
+.mainsection {
+	padding-inline: 13em;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	h4 {padding-bottom: 1em;}
+}
+
 .greeting {
 	background:	linear-gradient(135deg, rgba(74, 214, 116, 0.623), rgba(255, 255, 255, 0.2) 40%),
 				linear-gradient(315deg, rgba(251, 117, 231, 0.556), rgba(255, 255, 255, 0.4) 40%), 
 				#bb82fd6a;
+
 	padding-inline: 13em;
 	padding-top: 1em;
 	padding-bottom: 5em;
@@ -48,22 +56,31 @@
 
 // idk about this
 #embroidery {
-	display: none; //flex? block?
-	//flex-direction: column;
-	//justify-content: center;
-	//align-content: center;
+	display:block;
 	text-align: center;
 	margin: auto;
+	width: 100%;
+	.instacontent {
+		margin: auto;
+		width: 40%;
+		//padding: 2em;
+	}
 }
 
 // Responsive homepage
 @media screen and (max-width: 960px) {
-	.greeting {
+	.mainsection {
 		padding-inline: 6em;
+	}
+	#embroidery .instacontent {
+		width: 60%;
 	}
 }
 @media screen and (max-width: 675px) {
-	.greeting {
+	.mainsection {
 		padding-inline: 2em;
+	}
+	#embroidery .instacontent {
+		width: 100%;
 	}
 }
