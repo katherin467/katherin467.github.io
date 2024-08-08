@@ -1,173 +1,42 @@
 @lightorange: #FCAF17;
+@lighterorange: #ffe8bb;
 @orange: #F7941E;
 @darkorange: #F47920;
 
 .projecttop {
-    //background: 
-        //linear-gradient(#253b7f, #253b7f2c)
-        //#fa7f0c7d)
-        //linear-gradient(90deg, #9ba6c5, rgb(255, 255, 255, 0.3) 40.71%)
-        //radial-gradient(circle at center, white, transparent 50%);
-        //linear-gradient(rgba(255, 255, 255, 0.205),rgba(255, 255, 255, 0.205)),
-        
-        // half blue, half orange
-        
-        //linear-gradient(45deg,  #253b7f, rgba(255, 255, 255, 0.1) 40.71%), 
-		//linear-gradient(135deg, #253b7f, rgba(255, 255, 255, 0.1) 40.71%), 
-		//linear-gradient(225deg, #fa7f0c, rgba(255, 255, 255, 0.1) 40.71%),
-		//linear-gradient(315deg, #FA7E0C, rgba(255, 255, 255, 0.1) 40.71%);
-        
-        
-        // blue on top, orange on bottom
-        /*radial-gradient(ellipse at center, #fffffff1, transparent),
-        radial-gradient(ellipse at top, #253C7F, transparent),            
-        radial-gradient(ellipse at bottom, #FA7E0C, transparent);
-        */
-    //;
     background-color: @lightorange;
-    h3 {font-family: 'Graphik Medium';}
-}
-
-/*
-.subsection h3 {
-    //color:white;
-    //text-shadow: -1px -1px 0 @navy, 1px -1px 0 @navy, -1px 1px 0 @navy, 1px 1px 0 @navy;
-}
-*/
-
-#bigquestion {
-    //background-color: @skyblue;
 }
 
 .bgcolored {
-    //background-color: @skyblue;
+    background-color: @lighterorange;
 }
-/*
-#set {
-    min-width: 53.5em;
-    max-height: 35.5em;
-    //border: 1.4px solid @navy;
-    table-layout: fixed;
 
-    tr {
-        border-bottom: none;
-    }
-    th {
-        text-align:center;
-        color: white;
-        font-family: 'Graphik SemiBold';
-        background-color: @navy;
-    }
-    td{
-        padding: 0 10px;
-        height: auto;
-        background-color: white;
-    }
-    
-    ul{
-        padding-left: 0;
-        margin-left: 0;
-    }
-    li {
-        padding: 3px 0;
-        line-height: 1.5em;
-    }
-}
-#compet {
-    //min-width: 35em;
-    //max-width:100%;
-    //min-height: 35em;
-    max-width: 100%;
-    min-width: 55em;
-    height:auto;
-}
-#competdiv {
-    //width: 100%;
-    //min-height: 35.5em;
-    overflow: auto;
-  
-    max-width: 100%;  // or width instead of max-width
-    max-height: 600px; // or height instead of max-height
- 
-}
-#storyboard {
-    max-width: 100%;
-    min-width: 50em;
-    height:auto;
-}
-#storyboarddiv {
-    overflow: auto;
-    max-width: 100%; 
-    
-}
-#quotediv {
-    max-width: 80%;
-    margin: auto;
-    display:flex;
-    flex-direction:row;
-    border: 2px solid @orange;
-    background-color: white;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    p {
-        font-family: 'Graphik Italic'
-    }
-}
-#brandimgs {
-    display:flex; 
-    flex-direction: row; 
-    align-items:center; 
-    
-}
-#logo {
-    width: 40%;
-}
-#landingpages {
+.beforeafter {
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-evenly;
-    
+    padding-bottom: 2em;
     //flex-wrap:wrap;
-    .landingpage {
+    .oneside {
         display:flex;
         flex-direction:column;
         align-items:center;
         margin-bottom: 18px;
     }
+    #doubleimg {
+        display:flex;
+        flex-direction:row;
+        img {margin-inline: .5em;}
+    }
     img {
-        max-width: 20em;
-        border: @navy 5px solid;
+        max-width: 12em;
     }
     p {
         text-align: center;
         line-height: 1.5;
         margin-bottom:0;
     }
-}
-.imgwcaption {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-bottom: 18px;
-    
-    p {
-        text-align: center;
-        line-height: 1.5;
-        margin-bottom:0;
-    }
-}
-
-.bigquote {
-    font-size:32px;
-    color:@orange;
-    padding: 10px;
-}
-*/
-
-#finalsolutionbtn {
-    background-color: @orange;
-    color: white;
 }
 
 @media screen and (max-width: 675px) {
@@ -177,7 +46,7 @@
             padding-bottom: 8px;
         }
     }
-    #landingpages {
+    .beforeafter {
         flex-direction:column;
         align-items:center;
     }
