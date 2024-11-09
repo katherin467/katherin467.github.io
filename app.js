@@ -26,7 +26,7 @@ app.get('/contact', function(req, res) {
     res.sendFile(__dirname + '/contact.html')
 });
 app.get('/resume', function(req, res) {
-    res.sendFile(__dirname + '/pdfs/Lim, Katherine - Resume.pdf')
+    res.sendFile('katherin467.github.io/pdfs/Lim, Katherine - Resume.pdf')
 });
 app.get('/garyiswin', function(req, res) {
     res.sendFile(__dirname + '/garyiswin.html')
