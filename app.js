@@ -25,9 +25,10 @@ app.get('/about', function(req, res) {
 app.get('/contact', function(req, res) {
     res.sendFile(__dirname + '/contact.html')
 });
+/*
 app.get('/resume', function(req, res) {
     res.sendFile(__dirname + '/pdfs/Lim, Katherine - Resume.pdf')
-});
+});*/
 app.get('/garyiswin', function(req, res) {
     res.sendFile(__dirname + '/garyiswin.html')
 });
